@@ -29,6 +29,10 @@ class MainPage(BasePage):
         self.logontext = s("div#logon>ul>li>span")
         self.registerBtn = s("a.sendGA[href='/Register?url=%2F']")
 
+    def open(self,url='/'):
+        browser.open_url(url)
+        return self
+
     def go_to_login_page(self):
         self.loginbtn.click()
         return LoginPage()
