@@ -1,3 +1,4 @@
+from selene import browser
 from selene.support.jquery_style-selectors import s
 
 from src.pages.page import BasePage
@@ -40,4 +41,5 @@ class MainPage(BasePage):
     def log_out(self):
         self.logoutbtn.click()
         return self
+
 
