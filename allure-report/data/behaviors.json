@@ -1,0 +1,37 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "name" : "behaviors",
+  "children" : [ {
+    "name" : "會員登入功能",
+    "children" : [ {
+      "name" : "登入驗証碼NULL",
+      "children" : [ {
+        "name" : "test_login.test_user_can_not_login_with_empty_verifySN",
+        "uid" : "dc6ff6a38520faf1",
+        "parentUid" : "4c7efc6b3cc294ac3a3ad16d5e559583",
+        "status" : "passed",
+        "time" : {
+          "start" : 1538588350541,
+          "stop" : 1538588355311,
+          "duration" : 4770
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "4c7efc6b3cc294ac3a3ad16d5e559583"
+    } ],
+    "uid" : "3d3ba2ccbb2868330d7adfee441ead7c"
+  }, {
+    "name" : "test_login.test_user_can_login_and_logout",
+    "uid" : "3c8fd360215f3ef9",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "failed",
+    "time" : {
+      "start" : 1538588355317,
+      "stop" : 1538588356836,
+      "duration" : 1519
+    },
+    "flaky" : false,
+    "parameters" : [ ]
+  } ]
+}

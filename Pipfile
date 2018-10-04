@@ -1,0 +1,9 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+
+[packages]
+selene = "==1.0.0a14"
+pytest = "*"
+requests = "*"
+pytest-allure-adaptor = "*"

@@ -1,0 +1,25 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "name" : "categories",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "AttributeError: 'clear' object has no attribute 'get_screenshot_as_file'",
+      "children" : [ {
+        "name" : "test_login.test_user_can_login_and_logout",
+        "uid" : "3c8fd360215f3ef9",
+        "parentUid" : "0107eca1d23af8d158fea4a51fc72b73",
+        "status" : "failed",
+        "time" : {
+          "start" : 1538588355317,
+          "stop" : 1538588356836,
+          "duration" : 1519
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "0107eca1d23af8d158fea4a51fc72b73"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ]
+}

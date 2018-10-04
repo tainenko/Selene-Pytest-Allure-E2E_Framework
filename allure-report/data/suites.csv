@@ -1,0 +1,3 @@
+"Status","Name","Duration in ms","Description"
+"failed","testcase.test_login.test_user_can_login_and_logout","1519",""
+"passed","testcase.test_login.test_user_can_not_login_with_empty_verifySN","4770",""

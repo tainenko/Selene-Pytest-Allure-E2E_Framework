@@ -1,0 +1,66 @@
+{
+  "uid" : "3c8fd360215f3ef9",
+  "name" : "test_login.test_user_can_login_and_logout",
+  "fullName" : "testcase.test_login.test_user_can_login_and_logout",
+  "historyId" : "33cf63bfd72e67803876867a5d37a1b6",
+  "time" : {
+    "start" : 1538588355317,
+    "stop" : 1538588356836,
+    "duration" : 1519
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "AttributeError: 'clear' object has no attribute 'get_screenshot_as_file'",
+  "statusTrace" : "def test_user_can_login_and_logout():\n        login=LoginPage()\n>       main_page=login.login_as(\"eitctest001@gmail.com\",\"abc12345\").than_at_main_page()\n\ntestcase/test_login.py:22: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <src.pages.login_page.LoginPage object at 0x10b73f4a8>\nuser = 'eitctest001@gmail.com', passward = 'abc12345'\n\n    def login_as(self,user,passward):\n        self.username_input.set_value(user)\n        self.password_input.set_value(passward)\n>       verifycode=self.verifyCodeImg.get_screenshot_as_file(\"temp\")\nE       AttributeError: 'clear' object has no attribute 'get_screenshot_as_file'\n\nsrc/pages/login_page.py:33: AttributeError",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "host",
+    "value" : "ehsnde-MacBook-Pro.local"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "thread",
+    "value" : "8437-MainThread"
+  }, {
+    "name" : "suite",
+    "value" : "testcase"
+  }, {
+    "name" : "testClass",
+    "value" : "testcase"
+  }, {
+    "name" : "testMethod",
+    "value" : "test_login.test_user_can_login_and_logout"
+  }, {
+    "name" : "package",
+    "value" : "testcase"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "3c8fd360215f3ef9.json",
+  "parameterValues" : [ ]
+}

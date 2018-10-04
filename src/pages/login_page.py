@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
-from selene import browser
-from selene.support.jquery_style_selectors import s
+from common_imports import *
 
 from src.pages.page import BasePage
 from src.pages.main_page import MainPage
@@ -31,7 +30,7 @@ class LoginPage(BasePage):
     def login_as(self,user,passward):
         self.username_input.set_value(user)
         self.password_input.set_value(passward)
-        verifycode=self.verifyCodeImg.screenshot()
+        verifycode=self.verifyCodeImg.get_screenshot_as_file("temp")
         self.verifySN_input.set_value(verifycode)
         self.loginBtn.click()
         return self

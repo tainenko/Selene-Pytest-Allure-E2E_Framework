@@ -1,0 +1,3 @@
+
+Checking for mac64 chromedriver:2.42 in cache
+Driver found in /Users/ehsn/.wdm/chromedriver/2.42/mac64/chromedriver

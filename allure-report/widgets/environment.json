@@ -1,0 +1,10 @@
+[ {
+  "values" : [ "https://www.etmall.com.tw" ],
+  "name" : "hostname"
+}, {
+  "values" : [ "chrome" ],
+  "name" : "browser"
+}, {
+  "values" : [ "Selene Sample .py" ],
+  "name" : "report"
+} ]

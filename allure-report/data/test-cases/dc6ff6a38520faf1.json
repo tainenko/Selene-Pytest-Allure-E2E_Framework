@@ -1,0 +1,109 @@
+{
+  "uid" : "dc6ff6a38520faf1",
+  "name" : "test_login.test_user_can_not_login_with_empty_verifySN",
+  "fullName" : "testcase.test_login.test_user_can_not_login_with_empty_verifySN",
+  "historyId" : "1d774bbc36072f3e1176ea4aaf40222a",
+  "time" : {
+    "start" : 1538588350541,
+    "stop" : 1538588355311,
+    "duration" : 4770
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "輸入帳號密碼",
+      "time" : {
+        "start" : 1538588350543,
+        "stop" : 1538588350543,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "1a041d2caa9c2116",
+        "name" : "帳號",
+        "source" : "1a041d2caa9c2116.txt",
+        "type" : "text/plain",
+        "size" : 11
+      }, {
+        "uid" : "90bdbdb514e17560",
+        "name" : "密碼",
+        "source" : "90bdbdb514e17560.txt",
+        "type" : "text/plain",
+        "size" : 8
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 2,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ {
+      "uid" : "f75d890306ec01b9",
+      "name" : "Captured stdout call",
+      "source" : "f75d890306ec01b9.txt",
+      "type" : "text/plain",
+      "size" : 117
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 1,
+    "attachmentsCount" : 3,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "會員登入功能"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "host",
+    "value" : "ehsnde-MacBook-Pro.local"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "story",
+    "value" : "登入驗証碼NULL"
+  }, {
+    "name" : "thread",
+    "value" : "8437-MainThread"
+  }, {
+    "name" : "suite",
+    "value" : "testcase"
+  }, {
+    "name" : "testClass",
+    "value" : "testcase"
+  }, {
+    "name" : "testMethod",
+    "value" : "test_login.test_user_can_not_login_with_empty_verifySN"
+  }, {
+    "name" : "package",
+    "value" : "testcase"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "dc6ff6a38520faf1.json",
+  "parameterValues" : [ ]
+}

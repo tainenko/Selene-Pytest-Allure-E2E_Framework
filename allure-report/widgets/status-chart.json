@@ -1,0 +1,21 @@
+[ {
+  "uid" : "3c8fd360215f3ef9",
+  "name" : "test_login.test_user_can_login_and_logout",
+  "time" : {
+    "start" : 1538588355317,
+    "stop" : 1538588356836,
+    "duration" : 1519
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "dc6ff6a38520faf1",
+  "name" : "test_login.test_user_can_not_login_with_empty_verifySN",
+  "time" : {
+    "start" : 1538588350541,
+    "stop" : 1538588355311,
+    "duration" : 4770
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

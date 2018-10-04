@@ -1,0 +1,19 @@
+<ns0:environment xmlns:ns0="urn:model.commons.qatools.yandex.ru">
+  <id>32d2f997-b746-4309-b760-3bf6d0afb5dd</id>
+  <name>Allure environment parameters</name>
+  <parameter>
+    <key>report</key>
+    <name>report</name>
+    <value>Selene Sample .py</value>
+  </parameter>
+  <parameter>
+    <key>browser</key>
+    <name>browser</name>
+    <value>chrome</value>
+  </parameter>
+  <parameter>
+    <key>hostname</key>
+    <name>hostname</name>
+    <value>https://www.etmall.com.tw</value>
+  </parameter>
+</ns0:environment>

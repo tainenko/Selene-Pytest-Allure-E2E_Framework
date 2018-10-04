@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
-from selene import browser
-from selene.support.jquery_style-selectors import s,ss
+from common_imports import *
+
 from src.pages.page import BasePage
-from src.pages.page import LoginPage
 
 class MainPage(BasePage):
     def __init__(self):
