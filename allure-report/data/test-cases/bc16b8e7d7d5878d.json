@@ -1,0 +1,60 @@
+{
+  "uid" : "bc16b8e7d7d5878d",
+  "name" : "test_step.TestUserHandling.test_deletion",
+  "fullName" : "testcase.test_step.TestUserHandling.test_deletion",
+  "historyId" : "86f4a634584608d8364d2a64310c3189",
+  "time" : {
+    "start" : 1538620593234,
+    "stop" : 1538620593236,
+    "duration" : 2
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "host",
+    "value" : "ehsnde-MacBook-Pro.local"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "severity",
+    "value" : "critical"
+  }, {
+    "name" : "thread",
+    "value" : "11166-MainThread"
+  }, {
+    "name" : "suite",
+    "value" : "testcase"
+  }, {
+    "name" : "testClass",
+    "value" : "testcase"
+  }, {
+    "name" : "testMethod",
+    "value" : "test_step.TestUserHandling.test_deletion"
+  }, {
+    "name" : "package",
+    "value" : "testcase"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "critical",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "bc16b8e7d7d5878d.json",
+  "parameterValues" : [ ]
+}

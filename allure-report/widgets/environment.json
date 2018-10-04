@@ -5,6 +5,6 @@
   "values" : [ "chrome" ],
   "name" : "browser"
 }, {
-  "values" : [ "Selene Sample .py" ],
+  "values" : [ "Web Automation Report" ],
   "name" : "report"
 } ]

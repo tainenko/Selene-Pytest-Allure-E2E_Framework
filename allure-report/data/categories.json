@@ -4,21 +4,37 @@
   "children" : [ {
     "name" : "Product defects",
     "children" : [ {
-      "name" : "AttributeError: 'clear' object has no attribute 'get_screenshot_as_file'",
+      "name" : "NameError: name 'get_verifyImg_screen_shot' is not defined",
       "children" : [ {
-        "name" : "test_login.test_user_can_login_and_logout",
-        "uid" : "3c8fd360215f3ef9",
-        "parentUid" : "0107eca1d23af8d158fea4a51fc72b73",
+        "name" : "test_login.TestMemberLogin.test_user_can_login_and_logout",
+        "uid" : "c0aee5374e411d70",
+        "parentUid" : "f87454ef56f2f4c7ff9bf8e196d312a7",
         "status" : "failed",
         "time" : {
-          "start" : 1538588355317,
-          "stop" : 1538588356836,
-          "duration" : 1519
+          "start" : 1538620592848,
+          "stop" : 1538620593225,
+          "duration" : 377
         },
         "flaky" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "0107eca1d23af8d158fea4a51fc72b73"
+      "uid" : "f87454ef56f2f4c7ff9bf8e196d312a7"
+    }, {
+      "name" : "AssertionError: assert 0",
+      "children" : [ {
+        "name" : "test_step.TestUserHandling.test_modification",
+        "uid" : "50c76488acc9e866",
+        "parentUid" : "c9c77d7ae15b4ab6e63220cefc19b68f",
+        "status" : "failed",
+        "time" : {
+          "start" : 1538620593229,
+          "stop" : 1538620593232,
+          "duration" : 3
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "c9c77d7ae15b4ab6e63220cefc19b68f"
     } ],
     "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
   } ]

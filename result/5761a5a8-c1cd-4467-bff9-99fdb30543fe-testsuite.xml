@@ -1,0 +1,149 @@
+<ns0:test-suite xmlns:ns0="urn:model.allure.qatools.yandex.ru" start="1538620588220" stop="1538620593238">
+  <name>testcase</name>
+  <labels/>
+  <test-cases>
+    <test-case start="1538620588220" status="passed" stop="1538620592844">
+      <name>test_login.TestMemberLogin.test_user_can_not_login_with_empty_verifySN</name>
+      <attachments>
+        <attachment source="2cb9c4fd-e42f-4235-b6e1-e95d7b9f7b7e-attachment.txt" title="Captured stdout call" type="text/plain"/>
+      </attachments>
+      <labels>
+        <label name="feature" value="會員登入功能"/>
+        <label name="story" value="登入驗証碼NULL"/>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="11166-MainThread"/>
+        <label name="host" value="ehsnde-MacBook-Pro.local"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps>
+        <step start="1538620588224" status="passed" stop="1538620588224">
+          <name>輸入帳號密碼</name>
+          <title>輸入帳號密碼</title>
+          <attachments>
+            <attachment source="fc73fd83-9a1f-4fe6-820b-aeba09b4eb3b-attachment.txt" title="帳號" type="text/plain"/>
+            <attachment source="baba8fde-b435-421b-98cb-f3548553385d-attachment.txt" title="密碼" type="text/plain"/>
+          </attachments>
+          <steps/>
+        </step>
+      </steps>
+    </test-case>
+    <test-case start="1538620592848" status="failed" stop="1538620593225">
+      <name>test_login.TestMemberLogin.test_user_can_login_and_logout</name>
+      <failure>
+        <message>NameError: name 'get_verifyImg_screen_shot' is not defined</message>
+        <stack-trace>self = &lt;testcase.test_login.TestMemberLogin object at 0x10e5ff390&gt;
+
+    @allure.story('會員登入與登出功能')
+    def test_user_can_login_and_logout(self):
+        with allure.step('開啟登入頁'):pass
+        login = LoginPage()
+        with allure.step("輸入帳號、密碼，點擊登入Btn"):
+            allure.attach('帳號', 'eitctest001')
+            allure.attach('密碼', 'abc12345')
+&gt;       main_page = login.login_as("eitctest001@gmail.com", "abc12345").than_at_main_page()
+
+testcase/test_login.py:29: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;src.pages.login_page.LoginPage object at 0x10e5ff208&gt;
+user = 'eitctest001@gmail.com', passward = 'abc12345'
+
+    def login_as(self,user,passward):
+        self.username_input.set_value(user)
+        self.password_input.set_value(passward)
+        #self.verifyCodeImg.screenshot_as_png()
+        #get OCR result of verifyImg
+&gt;       get_verifyImg_screen_shot()
+E       NameError: name 'get_verifyImg_screen_shot' is not defined
+
+src/pages/login_page.py:35: NameError</stack-trace>
+      </failure>
+      <attachments/>
+      <labels>
+        <label name="feature" value="會員登入功能"/>
+        <label name="story" value="會員登入與登出功能"/>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="11166-MainThread"/>
+        <label name="host" value="ehsnde-MacBook-Pro.local"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps>
+        <step start="1538620592850" status="passed" stop="1538620592850">
+          <name>開啟登入頁</name>
+          <title>開啟登入頁</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1538620592850" status="passed" stop="1538620592850">
+          <name>輸入帳號、密碼，點擊登入Btn</name>
+          <title>輸入帳號、密碼，點擊登入Btn</title>
+          <attachments>
+            <attachment source="d3e8faaf-311a-4512-8fc4-f9b173e0d730-attachment.txt" title="帳號" type="text/plain"/>
+            <attachment source="9cb22cb0-2cb5-425b-a395-a4ff6d782e1d-attachment.txt" title="密碼" type="text/plain"/>
+          </attachments>
+          <steps/>
+        </step>
+      </steps>
+    </test-case>
+    <test-case start="1538620593227" status="passed" stop="1538620593228">
+      <name>test_step.TestUserHandling.test_login</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="critical"/>
+        <label name="thread" value="11166-MainThread"/>
+        <label name="host" value="ehsnde-MacBook-Pro.local"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1538620593229" status="failed" stop="1538620593232">
+      <name>test_step.TestUserHandling.test_modification</name>
+      <failure>
+        <message>AssertionError: assert 0</message>
+        <stack-trace>self = &lt;testcase.test_step.TestUserHandling object at 0x10e681400&gt;
+
+    def test_modification(self):
+&gt;       assert 0
+E       assert 0
+
+testcase/test_step.py:10: AssertionError</stack-trace>
+      </failure>
+      <attachments/>
+      <labels>
+        <label name="severity" value="critical"/>
+        <label name="thread" value="11166-MainThread"/>
+        <label name="host" value="ehsnde-MacBook-Pro.local"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1538620593234" status="passed" stop="1538620593236">
+      <name>test_step.TestUserHandling.test_deletion</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="critical"/>
+        <label name="thread" value="11166-MainThread"/>
+        <label name="host" value="ehsnde-MacBook-Pro.local"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1538620593237" status="passed" stop="1538620593238">
+      <name>test_step.test_normal</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="11166-MainThread"/>
+        <label name="host" value="ehsnde-MacBook-Pro.local"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+  </test-cases>
+</ns0:test-suite>

@@ -1,12 +1,12 @@
 {
-  "uid" : "dc6ff6a38520faf1",
-  "name" : "test_login.test_user_can_not_login_with_empty_verifySN",
-  "fullName" : "testcase.test_login.test_user_can_not_login_with_empty_verifySN",
-  "historyId" : "1d774bbc36072f3e1176ea4aaf40222a",
+  "uid" : "c5129187c4811d5d",
+  "name" : "test_login.TestMemberLogin.test_user_can_not_login_with_empty_verifySN",
+  "fullName" : "testcase.test_login.TestMemberLogin.test_user_can_not_login_with_empty_verifySN",
+  "historyId" : "61546eb935ac0c73743808eaa02f5d8a",
   "time" : {
-    "start" : 1538588350541,
-    "stop" : 1538588355311,
-    "duration" : 4770
+    "start" : 1538620588220,
+    "stop" : 1538620592844,
+    "duration" : 4624
   },
   "description" : "",
   "descriptionHtml" : "",
@@ -18,22 +18,22 @@
     "steps" : [ {
       "name" : "輸入帳號密碼",
       "time" : {
-        "start" : 1538588350543,
-        "stop" : 1538588350543,
+        "start" : 1538620588224,
+        "stop" : 1538620588224,
         "duration" : 0
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ {
-        "uid" : "1a041d2caa9c2116",
+        "uid" : "59e8bf19415d2763",
         "name" : "帳號",
-        "source" : "1a041d2caa9c2116.txt",
+        "source" : "59e8bf19415d2763.txt",
         "type" : "text/plain",
         "size" : 11
       }, {
-        "uid" : "90bdbdb514e17560",
+        "uid" : "e4002c48a25eb9c6",
         "name" : "密碼",
-        "source" : "90bdbdb514e17560.txt",
+        "source" : "e4002c48a25eb9c6.txt",
         "type" : "text/plain",
         "size" : 8
       } ],
@@ -44,9 +44,9 @@
       "hasContent" : true
     } ],
     "attachments" : [ {
-      "uid" : "f75d890306ec01b9",
+      "uid" : "849624759e0dc1d5",
       "name" : "Captured stdout call",
-      "source" : "f75d890306ec01b9.txt",
+      "source" : "849624759e0dc1d5.txt",
       "type" : "text/plain",
       "size" : 117
     } ],
@@ -77,7 +77,7 @@
     "value" : "登入驗証碼NULL"
   }, {
     "name" : "thread",
-    "value" : "8437-MainThread"
+    "value" : "11166-MainThread"
   }, {
     "name" : "suite",
     "value" : "testcase"
@@ -86,7 +86,7 @@
     "value" : "testcase"
   }, {
     "name" : "testMethod",
-    "value" : "test_login.test_user_can_not_login_with_empty_verifySN"
+    "value" : "test_login.TestMemberLogin.test_user_can_not_login_with_empty_verifySN"
   }, {
     "name" : "package",
     "value" : "testcase"
@@ -104,6 +104,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "dc6ff6a38520faf1.json",
+  "source" : "c5129187c4811d5d.json",
   "parameterValues" : [ ]
 }

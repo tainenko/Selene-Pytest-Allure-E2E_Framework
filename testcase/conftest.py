@@ -25,7 +25,7 @@ def setup_browser():
 @pytest.fixture(scope="session", autouse=True)
 def allure_config():
     # setup allure environment
-    allure.environment(report="Selene Sample .py", browser=browser_instance, hostname=base_url)
+    allure.environment(report="Web Automation Report", browser=browser_instance, hostname=base_url)
 
 
 @pytest.mark.hookwrapper

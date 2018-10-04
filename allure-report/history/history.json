@@ -1,5 +1,5 @@
 {
-  "33cf63bfd72e67803876867a5d37a1b6" : {
+  "ea68d4df85c6dab417c629423ac4e25f" : {
     "statistic" : {
       "failed" : 1,
       "broken" : 0,
@@ -9,17 +9,17 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "3c8fd360215f3ef9",
+      "uid" : "50c76488acc9e866",
       "status" : "failed",
-      "statusDetails" : "AttributeError: 'clear' object has no attribute 'get_screenshot_as_file'",
+      "statusDetails" : "AssertionError: assert 0",
       "time" : {
-        "start" : 1538588355317,
-        "stop" : 1538588356836,
-        "duration" : 1519
+        "start" : 1538620593229,
+        "stop" : 1538620593232,
+        "duration" : 3
       }
     } ]
   },
-  "1d774bbc36072f3e1176ea4aaf40222a" : {
+  "86f4a634584608d8364d2a64310c3189" : {
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
@@ -29,12 +29,89 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "dc6ff6a38520faf1",
+      "uid" : "bc16b8e7d7d5878d",
       "status" : "passed",
       "time" : {
-        "start" : 1538588350541,
-        "stop" : 1538588355311,
-        "duration" : 4770
+        "start" : 1538620593234,
+        "stop" : 1538620593236,
+        "duration" : 2
+      }
+    } ]
+  },
+  "61546eb935ac0c73743808eaa02f5d8a" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "c5129187c4811d5d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1538620588220,
+        "stop" : 1538620592844,
+        "duration" : 4624
+      }
+    } ]
+  },
+  "45288d06380433a07b0f5752f763f560" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "bb809f721594fc1c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1538620593237,
+        "stop" : 1538620593238,
+        "duration" : 1
+      }
+    } ]
+  },
+  "91e57c90c94f726b4a3d23d04c994429" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "c0aee5374e411d70",
+      "status" : "failed",
+      "statusDetails" : "NameError: name 'get_verifyImg_screen_shot' is not defined",
+      "time" : {
+        "start" : 1538620592848,
+        "stop" : 1538620593225,
+        "duration" : 377
+      }
+    } ]
+  },
+  "b2052cf19a32f28b9f05130669976039" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "fd7a33e8959172b8",
+      "status" : "passed",
+      "time" : {
+        "start" : 1538620593227,
+        "stop" : 1538620593228,
+        "duration" : 1
       }
     } ]
   }

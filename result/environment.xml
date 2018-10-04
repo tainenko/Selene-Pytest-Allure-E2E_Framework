@@ -1,10 +1,10 @@
 <ns0:environment xmlns:ns0="urn:model.commons.qatools.yandex.ru">
-  <id>32d2f997-b746-4309-b760-3bf6d0afb5dd</id>
+  <id>42fdd854-a682-42aa-b8d3-451179dcda56</id>
   <name>Allure environment parameters</name>
   <parameter>
     <key>report</key>
     <name>report</name>
-    <value>Selene Sample .py</value>
+    <value>Web Automation Report</value>
   </parameter>
   <parameter>
     <key>browser</key>
