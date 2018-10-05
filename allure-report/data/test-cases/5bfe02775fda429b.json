@@ -1,11 +1,11 @@
 {
-  "uid" : "bc16b8e7d7d5878d",
-  "name" : "test_step.TestUserHandling.test_deletion",
-  "fullName" : "testcase.test_step.TestUserHandling.test_deletion",
-  "historyId" : "86f4a634584608d8364d2a64310c3189",
+  "uid" : "5bfe02775fda429b",
+  "name" : "test_step.TestUserHandling.test_login",
+  "fullName" : "testcase.test_step.TestUserHandling.test_login",
+  "historyId" : "b2052cf19a32f28b9f05130669976039",
   "time" : {
-    "start" : 1538620593234,
-    "stop" : 1538620593236,
+    "start" : 1538720674874,
+    "stop" : 1538720674876,
     "duration" : 2
   },
   "description" : "",
@@ -28,7 +28,7 @@
     "value" : "critical"
   }, {
     "name" : "thread",
-    "value" : "11166-MainThread"
+    "value" : "2056-MainThread"
   }, {
     "name" : "suite",
     "value" : "testcase"
@@ -37,7 +37,7 @@
     "value" : "testcase"
   }, {
     "name" : "testMethod",
-    "value" : "test_step.TestUserHandling.test_deletion"
+    "value" : "test_step.TestUserHandling.test_login"
   }, {
     "name" : "package",
     "value" : "testcase"
@@ -55,6 +55,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "bc16b8e7d7d5878d.json",
+  "source" : "5bfe02775fda429b.json",
   "parameterValues" : [ ]
 }

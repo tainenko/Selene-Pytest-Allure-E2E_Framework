@@ -1,16 +1,18 @@
 {
-  "uid" : "fd7a33e8959172b8",
-  "name" : "test_step.TestUserHandling.test_login",
-  "fullName" : "testcase.test_step.TestUserHandling.test_login",
-  "historyId" : "b2052cf19a32f28b9f05130669976039",
+  "uid" : "af9b030b25a5720b",
+  "name" : "test_step.TestUserHandling.test_modification",
+  "fullName" : "testcase.test_step.TestUserHandling.test_modification",
+  "historyId" : "ea68d4df85c6dab417c629423ac4e25f",
   "time" : {
-    "start" : 1538620593227,
-    "stop" : 1538620593228,
-    "duration" : 1
+    "start" : 1538720674877,
+    "stop" : 1538720674985,
+    "duration" : 108
   },
   "description" : "",
   "descriptionHtml" : "",
-  "status" : "passed",
+  "status" : "failed",
+  "statusMessage" : "AssertionError: assert 0",
+  "statusTrace" : "self = <testcase.test_step.TestUserHandling object at 0x103b70e10>\n\n    def test_modification(self):\n>       assert 0\nE       assert 0\n\ntestcase/test_step.py:10: AssertionError",
   "flaky" : false,
   "beforeStages" : [ ],
   "afterStages" : [ ],
@@ -28,7 +30,7 @@
     "value" : "critical"
   }, {
     "name" : "thread",
-    "value" : "11166-MainThread"
+    "value" : "2056-MainThread"
   }, {
     "name" : "suite",
     "value" : "testcase"
@@ -37,7 +39,7 @@
     "value" : "testcase"
   }, {
     "name" : "testMethod",
-    "value" : "test_step.TestUserHandling.test_login"
+    "value" : "test_step.TestUserHandling.test_modification"
   }, {
     "name" : "package",
     "value" : "testcase"
@@ -52,9 +54,13 @@
   "extra" : {
     "severity" : "critical",
     "retries" : [ ],
-    "categories" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
     "tags" : [ ]
   },
-  "source" : "fd7a33e8959172b8.json",
+  "source" : "af9b030b25a5720b.json",
   "parameterValues" : [ ]
 }

@@ -1,12 +1,12 @@
 {
-  "uid" : "c5129187c4811d5d",
+  "uid" : "bb95a7eff10a2974",
   "name" : "test_login.TestMemberLogin.test_user_can_not_login_with_empty_verifySN",
   "fullName" : "testcase.test_login.TestMemberLogin.test_user_can_not_login_with_empty_verifySN",
   "historyId" : "61546eb935ac0c73743808eaa02f5d8a",
   "time" : {
-    "start" : 1538620588220,
-    "stop" : 1538620592844,
-    "duration" : 4624
+    "start" : 1538720657160,
+    "stop" : 1538720661307,
+    "duration" : 4147
   },
   "description" : "",
   "descriptionHtml" : "",
@@ -18,22 +18,22 @@
     "steps" : [ {
       "name" : "輸入帳號密碼",
       "time" : {
-        "start" : 1538620588224,
-        "stop" : 1538620588224,
+        "start" : 1538720657163,
+        "stop" : 1538720657163,
         "duration" : 0
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ {
-        "uid" : "59e8bf19415d2763",
+        "uid" : "18e02761889127fd",
         "name" : "帳號",
-        "source" : "59e8bf19415d2763.txt",
+        "source" : "18e02761889127fd.txt",
         "type" : "text/plain",
         "size" : 11
       }, {
-        "uid" : "e4002c48a25eb9c6",
+        "uid" : "761dbe70ff5aca82",
         "name" : "密碼",
-        "source" : "e4002c48a25eb9c6.txt",
+        "source" : "761dbe70ff5aca82.txt",
         "type" : "text/plain",
         "size" : 8
       } ],
@@ -44,9 +44,9 @@
       "hasContent" : true
     } ],
     "attachments" : [ {
-      "uid" : "849624759e0dc1d5",
+      "uid" : "7ef9a1ac20ca8beb",
       "name" : "Captured stdout call",
-      "source" : "849624759e0dc1d5.txt",
+      "source" : "7ef9a1ac20ca8beb.txt",
       "type" : "text/plain",
       "size" : 117
     } ],
@@ -77,7 +77,7 @@
     "value" : "登入驗証碼NULL"
   }, {
     "name" : "thread",
-    "value" : "11166-MainThread"
+    "value" : "2056-MainThread"
   }, {
     "name" : "suite",
     "value" : "testcase"
@@ -104,6 +104,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "c5129187c4811d5d.json",
+  "source" : "bb95a7eff10a2974.json",
   "parameterValues" : [ ]
 }

@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 from common_imports import *
-
 from src.pages.page import BasePage
 
 class MainPage(BasePage):
@@ -25,17 +24,26 @@ class MainPage(BasePage):
         self.recommendProducts = s("#RecommendProducts")           # 你可能會喜歡All
         self.recommendProductsList = ss(".n-ulike__list.n-hover--img>li")# 你可能會喜歡 - 商品列表
         self.bestProducts = s("div#homeHotPdList")                 # 更多精選商品
-        self.crazyBannerCloseBtn = s("#cBtnClose")
+        self.crazyBannerCloseBtn = s("a#cBtnClose")
         self.logontext = s("div#logon>ul>li>span")
         self.registerBtn = s("a.sendGA[href='/Register?url=%2F']")
 
     def open(self,url='/'):
         browser.open_url(url)
         return self
+    def close_crazy_banner(self):
+        try:
+            self.crazyBannerCloseBtn.should(be.clickable)
+            self.crazyBannerCloseBtn.click()
+            return self
+        except:
+            return self
 
     def go_to_login_page(self):
         self.loginbtn.click()
         return LoginPage()
+
+
 
     def log_out(self):
         self.logoutbtn.click()

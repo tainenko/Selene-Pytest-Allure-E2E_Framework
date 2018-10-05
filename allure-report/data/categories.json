@@ -4,32 +4,16 @@
   "children" : [ {
     "name" : "Product defects",
     "children" : [ {
-      "name" : "NameError: name 'get_verifyImg_screen_shot' is not defined",
-      "children" : [ {
-        "name" : "test_login.TestMemberLogin.test_user_can_login_and_logout",
-        "uid" : "c0aee5374e411d70",
-        "parentUid" : "f87454ef56f2f4c7ff9bf8e196d312a7",
-        "status" : "failed",
-        "time" : {
-          "start" : 1538620592848,
-          "stop" : 1538620593225,
-          "duration" : 377
-        },
-        "flaky" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "f87454ef56f2f4c7ff9bf8e196d312a7"
-    }, {
       "name" : "AssertionError: assert 0",
       "children" : [ {
         "name" : "test_step.TestUserHandling.test_modification",
-        "uid" : "50c76488acc9e866",
+        "uid" : "af9b030b25a5720b",
         "parentUid" : "c9c77d7ae15b4ab6e63220cefc19b68f",
         "status" : "failed",
         "time" : {
-          "start" : 1538620593229,
-          "stop" : 1538620593232,
-          "duration" : 3
+          "start" : 1538720674877,
+          "stop" : 1538720674985,
+          "duration" : 108
         },
         "flaky" : false,
         "parameters" : [ ]

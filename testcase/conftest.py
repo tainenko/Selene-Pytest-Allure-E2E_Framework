@@ -13,14 +13,16 @@ def setup_browser():
 
 
     config.browser_name = BrowserName.CHROME
-    config.maximize_window = True
+    config.start_maximized = True
     config.base_url = "https://www.etmall.com.tw"
+    config.app_host = ''
 
+    '''
     # turn off selene auto-screenshots
     from selene import helpers
     helpers.take_screenshot = lambda *x: "See attachments"
     yield None
-
+    '''
 
 @pytest.fixture(scope="session", autouse=True)
 def allure_config():
