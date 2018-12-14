@@ -4,6 +4,7 @@
 <https://selene-docs-test.readthedocs.io/en/latest/>   
 
 ### Pytest 
+<https://docs.pytest.org/>  
 生成Allure報告  
 	$ py.test testcase/ --alluredir ./result/    
 
