@@ -1,61 +1,81 @@
 [ {
-  "uid" : "b4f6a7407b509854",
-  "name" : "test_step.TestUserHandling.test_deletion",
+  "uid" : "fc61e128dad02bbc",
+  "name" : "test_login.TestMemberLogin.test_user_can_not_login_with_empty_verifySN",
   "time" : {
-    "start" : 1538720674986,
-    "stop" : 1538720674988,
+    "start" : 1538989333820,
+    "stop" : 1538989340828,
+    "duration" : 7008
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "cbf39876fe6fd342",
+  "name" : "test_shopping.TestMemberLogin.test_add_product_to_cart",
+  "time" : {
+    "start" : 1538989374984,
+    "stop" : 1538989383559,
+    "duration" : 8575
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e67955488d2a5c39",
+  "name" : "test_step.test_normal",
+  "time" : {
+    "start" : 1538989383693,
+    "stop" : 1538989383695,
     "duration" : 2
   },
   "status" : "passed",
-  "severity" : "critical"
+  "severity" : "normal"
 }, {
-  "uid" : "b451dfc944af8d8e",
-  "name" : "test_step.test_normal",
+  "uid" : "8270e4f6d0a6ada9",
+  "name" : "test_step.TestUserHandling.test_login",
   "time" : {
-    "start" : 1538720674990,
-    "stop" : 1538720674991,
+    "start" : 1538989383560,
+    "stop" : 1538989383561,
     "duration" : 1
   },
   "status" : "passed",
-  "severity" : "normal"
+  "severity" : "critical"
 }, {
-  "uid" : "c0c94aae8476ae08",
+  "uid" : "ceb32de11a083ac0",
   "name" : "test_login.TestMemberLogin.test_user_can_login_and_logout",
   "time" : {
-    "start" : 1538720661311,
-    "stop" : 1538720674869,
-    "duration" : 13558
+    "start" : 1538989340833,
+    "stop" : 1538989364150,
+    "duration" : 23317
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "bb95a7eff10a2974",
-  "name" : "test_login.TestMemberLogin.test_user_can_not_login_with_empty_verifySN",
+  "uid" : "a018158f0988184b",
+  "name" : "test_shopping.TestMemberLogin.test_user_can_login_and_logout",
   "time" : {
-    "start" : 1538720657160,
-    "stop" : 1538720661307,
-    "duration" : 4147
+    "start" : 1538989364153,
+    "stop" : 1538989374981,
+    "duration" : 10828
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "5bfe02775fda429b",
-  "name" : "test_step.TestUserHandling.test_login",
+  "uid" : "936be531995455",
+  "name" : "test_step.TestUserHandling.test_modification",
   "time" : {
-    "start" : 1538720674874,
-    "stop" : 1538720674876,
+    "start" : 1538989383562,
+    "stop" : 1538989383688,
+    "duration" : 126
+  },
+  "status" : "failed",
+  "severity" : "critical"
+}, {
+  "uid" : "d5c3ffc14b35cdd8",
+  "name" : "test_step.TestUserHandling.test_deletion",
+  "time" : {
+    "start" : 1538989383690,
+    "stop" : 1538989383692,
     "duration" : 2
   },
   "status" : "passed",
-  "severity" : "critical"
-}, {
-  "uid" : "af9b030b25a5720b",
-  "name" : "test_step.TestUserHandling.test_modification",
-  "time" : {
-    "start" : 1538720674877,
-    "stop" : 1538720674985,
-    "duration" : 108
-  },
-  "status" : "failed",
   "severity" : "critical"
 } ]

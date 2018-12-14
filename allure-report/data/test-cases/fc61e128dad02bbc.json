@@ -1,12 +1,12 @@
 {
-  "uid" : "bb95a7eff10a2974",
+  "uid" : "fc61e128dad02bbc",
   "name" : "test_login.TestMemberLogin.test_user_can_not_login_with_empty_verifySN",
   "fullName" : "testcase.test_login.TestMemberLogin.test_user_can_not_login_with_empty_verifySN",
   "historyId" : "61546eb935ac0c73743808eaa02f5d8a",
   "time" : {
-    "start" : 1538720657160,
-    "stop" : 1538720661307,
-    "duration" : 4147
+    "start" : 1538989333820,
+    "stop" : 1538989340828,
+    "duration" : 7008
   },
   "description" : "",
   "descriptionHtml" : "",
@@ -18,22 +18,22 @@
     "steps" : [ {
       "name" : "輸入帳號密碼",
       "time" : {
-        "start" : 1538720657163,
-        "stop" : 1538720657163,
+        "start" : 1538989335685,
+        "stop" : 1538989335685,
         "duration" : 0
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ {
-        "uid" : "18e02761889127fd",
+        "uid" : "8989a74f1d65fec5",
         "name" : "帳號",
-        "source" : "18e02761889127fd.txt",
+        "source" : "8989a74f1d65fec5.txt",
         "type" : "text/plain",
         "size" : 11
       }, {
-        "uid" : "761dbe70ff5aca82",
+        "uid" : "92e9bf40b0adafb0",
         "name" : "密碼",
-        "source" : "761dbe70ff5aca82.txt",
+        "source" : "92e9bf40b0adafb0.txt",
         "type" : "text/plain",
         "size" : 8
       } ],
@@ -43,16 +43,10 @@
       "shouldDisplayMessage" : false,
       "hasContent" : true
     } ],
-    "attachments" : [ {
-      "uid" : "7ef9a1ac20ca8beb",
-      "name" : "Captured stdout call",
-      "source" : "7ef9a1ac20ca8beb.txt",
-      "type" : "text/plain",
-      "size" : 117
-    } ],
+    "attachments" : [ ],
     "parameters" : [ ],
     "stepsCount" : 1,
-    "attachmentsCount" : 3,
+    "attachmentsCount" : 2,
     "shouldDisplayMessage" : false,
     "hasContent" : true
   },
@@ -77,7 +71,7 @@
     "value" : "登入驗証碼NULL"
   }, {
     "name" : "thread",
-    "value" : "2056-MainThread"
+    "value" : "3736-MainThread"
   }, {
     "name" : "suite",
     "value" : "testcase"
@@ -104,6 +98,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "bb95a7eff10a2974.json",
+  "source" : "fc61e128dad02bbc.json",
   "parameterValues" : [ ]
 }

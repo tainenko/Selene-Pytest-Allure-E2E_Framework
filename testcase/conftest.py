@@ -1,8 +1,10 @@
 from common_imports import *
 from selene.helpers import env
 from selene import config
-
 from selene.browsers import BrowserName
+
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 
 browser_instance = env('selene_browser_name') or config.BrowserName.CHROME
 base_url = "https://www.etmall.com.tw"
@@ -10,10 +12,16 @@ base_url = "https://www.etmall.com.tw"
 
 @pytest.fixture(scope="session", autouse=True)
 def setup_browser():
-
+    options = Options()
+    prefs = {'profile.default_content_setting_values': {'notifications': 2}}#關閉chrome顯示通知
+    options.add_experimental_option('prefs', prefs)
+    options.add_argument('--window-size=1280,1024')
+    driver = webdriver.Chrome(chrome_options=options)
+    browser.set_driver(driver)
 
     config.browser_name = BrowserName.CHROME
     config.start_maximized = True
+    #config.hold_browser_open = True
     config.base_url = "https://www.etmall.com.tw"
     config.app_host = ''
 

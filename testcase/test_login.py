@@ -22,7 +22,7 @@ class TestMemberLogin(object):
     @allure.story('會員登入與登出功能')
     def test_user_can_login_and_logout(self):
         with allure.step('開啟登入頁'):pass
-        login = LoginPage()
+        login = LoginPage().open_login_page()
         with allure.step("輸入帳號、密碼，點擊登入Btn"):
             allure.attach('帳號', 'eitctest001')
             allure.attach('密碼', 'abc12345')

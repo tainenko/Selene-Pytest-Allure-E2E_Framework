@@ -1,11 +1,11 @@
 {
-  "uid" : "b451dfc944af8d8e",
-  "name" : "test_step.test_normal",
-  "fullName" : "testcase.test_step.test_normal",
-  "historyId" : "45288d06380433a07b0f5752f763f560",
+  "uid" : "8270e4f6d0a6ada9",
+  "name" : "test_step.TestUserHandling.test_login",
+  "fullName" : "testcase.test_step.TestUserHandling.test_login",
+  "historyId" : "b2052cf19a32f28b9f05130669976039",
   "time" : {
-    "start" : 1538720674990,
-    "stop" : 1538720674991,
+    "start" : 1538989383560,
+    "stop" : 1538989383561,
     "duration" : 1
   },
   "description" : "",
@@ -25,10 +25,10 @@
     "value" : "cpython3"
   }, {
     "name" : "severity",
-    "value" : "normal"
+    "value" : "critical"
   }, {
     "name" : "thread",
-    "value" : "2056-MainThread"
+    "value" : "3736-MainThread"
   }, {
     "name" : "suite",
     "value" : "testcase"
@@ -37,7 +37,7 @@
     "value" : "testcase"
   }, {
     "name" : "testMethod",
-    "value" : "test_step.test_normal"
+    "value" : "test_step.TestUserHandling.test_login"
   }, {
     "name" : "package",
     "value" : "testcase"
@@ -50,11 +50,11 @@
   "hidden" : false,
   "retry" : false,
   "extra" : {
-    "severity" : "normal",
+    "severity" : "critical",
     "retries" : [ ],
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "b451dfc944af8d8e.json",
+  "source" : "8270e4f6d0a6ada9.json",
   "parameterValues" : [ ]
 }

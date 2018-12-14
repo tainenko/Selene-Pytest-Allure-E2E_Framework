@@ -1,0 +1,192 @@
+<ns0:test-suite xmlns:ns0="urn:model.allure.qatools.yandex.ru" start="1538989333820" stop="1538989383695">
+  <name>testcase</name>
+  <labels/>
+  <test-cases>
+    <test-case start="1538989333820" status="passed" stop="1538989340828">
+      <name>test_login.TestMemberLogin.test_user_can_not_login_with_empty_verifySN</name>
+      <attachments/>
+      <labels>
+        <label name="story" value="登入驗証碼NULL"/>
+        <label name="feature" value="會員登入功能"/>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="3736-MainThread"/>
+        <label name="host" value="ehsnde-MacBook-Pro.local"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps>
+        <step start="1538989335685" status="passed" stop="1538989335685">
+          <name>輸入帳號密碼</name>
+          <title>輸入帳號密碼</title>
+          <attachments>
+            <attachment source="7e6cee45-83d8-42e8-af74-79a5bf5c19ed-attachment.txt" title="帳號" type="text/plain"/>
+            <attachment source="1e73262a-8039-4c78-a9df-2681db3fa9b9-attachment.txt" title="密碼" type="text/plain"/>
+          </attachments>
+          <steps/>
+        </step>
+      </steps>
+    </test-case>
+    <test-case start="1538989340833" status="passed" stop="1538989364150">
+      <name>test_login.TestMemberLogin.test_user_can_login_and_logout</name>
+      <attachments/>
+      <labels>
+        <label name="story" value="會員登入與登出功能"/>
+        <label name="feature" value="會員登入功能"/>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="3736-MainThread"/>
+        <label name="host" value="ehsnde-MacBook-Pro.local"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps>
+        <step start="1538989340834" status="passed" stop="1538989340834">
+          <name>開啟登入頁</name>
+          <title>開啟登入頁</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1538989341166" status="passed" stop="1538989341166">
+          <name>輸入帳號、密碼，點擊登入Btn</name>
+          <title>輸入帳號、密碼，點擊登入Btn</title>
+          <attachments>
+            <attachment source="d794461b-02c5-415e-aeef-5337dab9cbf3-attachment.txt" title="帳號" type="text/plain"/>
+            <attachment source="9ae21e2a-1926-483f-854b-eac873c4fba4-attachment.txt" title="密碼" type="text/plain"/>
+          </attachments>
+          <steps/>
+        </step>
+        <step start="1538989355093" status="passed" stop="1538989355093">
+          <name>首頁的登入text必須visible，「xxx 您好」</name>
+          <title>首頁的登入text必須visible，「xxx 您好」</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1538989355150" status="passed" stop="1538989355150">
+          <name>關閉CrazyAD</name>
+          <title>關閉CrazyAD</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1538989360138" status="passed" stop="1538989360138">
+          <name>點擊登出Btn</name>
+          <title>點擊登出Btn</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1538989360275" status="passed" stop="1538989360275">
+          <name>成功登出，登入Btn可點擊</name>
+          <title>成功登出，登入Btn可點擊</title>
+          <attachments/>
+          <steps/>
+        </step>
+      </steps>
+    </test-case>
+    <test-case start="1538989364153" status="passed" stop="1538989374981">
+      <name>test_shopping.TestMemberLogin.test_user_can_login_and_logout</name>
+      <attachments/>
+      <labels>
+        <label name="story" value="會員登入"/>
+        <label name="feature" value="結帳功能"/>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="3736-MainThread"/>
+        <label name="host" value="ehsnde-MacBook-Pro.local"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps>
+        <step start="1538989364154" status="passed" stop="1538989364154">
+          <name>開啟登入頁</name>
+          <title>開啟登入頁</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1538989364519" status="passed" stop="1538989364519">
+          <name>輸入帳號、密碼，點擊登入Btn</name>
+          <title>輸入帳號、密碼，點擊登入Btn</title>
+          <attachments>
+            <attachment source="abefa809-eaf9-48cb-b91f-d4d569982c09-attachment.txt" title="帳號" type="text/plain"/>
+            <attachment source="0fa8f290-ff46-41d9-a512-55096bba939c-attachment.txt" title="密碼" type="text/plain"/>
+          </attachments>
+          <steps/>
+        </step>
+        <step start="1538989374958" status="passed" stop="1538989374958">
+          <name>首頁的登入text必須visible，「xxx 您好」</name>
+          <title>首頁的登入text必須visible，「xxx 您好」</title>
+          <attachments/>
+          <steps/>
+        </step>
+      </steps>
+    </test-case>
+    <test-case start="1538989374984" status="passed" stop="1538989383559">
+      <name>test_shopping.TestMemberLogin.test_add_product_to_cart</name>
+      <attachments/>
+      <labels>
+        <label name="story" value="加入購物車"/>
+        <label name="feature" value="結帳功能"/>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="3736-MainThread"/>
+        <label name="host" value="ehsnde-MacBook-Pro.local"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1538989383560" status="passed" stop="1538989383561">
+      <name>test_step.TestUserHandling.test_login</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="critical"/>
+        <label name="thread" value="3736-MainThread"/>
+        <label name="host" value="ehsnde-MacBook-Pro.local"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1538989383562" status="failed" stop="1538989383688">
+      <name>test_step.TestUserHandling.test_modification</name>
+      <failure>
+        <message>AssertionError: assert 0</message>
+        <stack-trace>self = &lt;testcase.test_step.TestUserHandling object at 0x1071b8b38&gt;
+
+    def test_modification(self):
+&gt;       assert 0
+E       assert 0
+
+testcase/test_step.py:10: AssertionError</stack-trace>
+      </failure>
+      <attachments/>
+      <labels>
+        <label name="severity" value="critical"/>
+        <label name="thread" value="3736-MainThread"/>
+        <label name="host" value="ehsnde-MacBook-Pro.local"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1538989383690" status="passed" stop="1538989383692">
+      <name>test_step.TestUserHandling.test_deletion</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="critical"/>
+        <label name="thread" value="3736-MainThread"/>
+        <label name="host" value="ehsnde-MacBook-Pro.local"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1538989383693" status="passed" stop="1538989383695">
+      <name>test_step.test_normal</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="3736-MainThread"/>
+        <label name="host" value="ehsnde-MacBook-Pro.local"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+  </test-cases>
+</ns0:test-suite>

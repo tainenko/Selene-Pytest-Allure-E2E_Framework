@@ -1,12 +1,12 @@
 {
-  "uid" : "b4f6a7407b509854",
-  "name" : "test_step.TestUserHandling.test_deletion",
-  "fullName" : "testcase.test_step.TestUserHandling.test_deletion",
-  "historyId" : "86f4a634584608d8364d2a64310c3189",
+  "uid" : "cbf39876fe6fd342",
+  "name" : "test_shopping.TestMemberLogin.test_add_product_to_cart",
+  "fullName" : "testcase.test_shopping.TestMemberLogin.test_add_product_to_cart",
+  "historyId" : "d6134fb1222fce84d1dfd08a063ee76d",
   "time" : {
-    "start" : 1538720674986,
-    "stop" : 1538720674988,
-    "duration" : 2
+    "start" : 1538989374984,
+    "stop" : 1538989383559,
+    "duration" : 8575
   },
   "description" : "",
   "descriptionHtml" : "",
@@ -15,6 +15,9 @@
   "beforeStages" : [ ],
   "afterStages" : [ ],
   "labels" : [ {
+    "name" : "feature",
+    "value" : "結帳功能"
+  }, {
     "name" : "framework",
     "value" : "pytest"
   }, {
@@ -25,10 +28,13 @@
     "value" : "cpython3"
   }, {
     "name" : "severity",
-    "value" : "critical"
+    "value" : "normal"
+  }, {
+    "name" : "story",
+    "value" : "加入購物車"
   }, {
     "name" : "thread",
-    "value" : "2056-MainThread"
+    "value" : "3736-MainThread"
   }, {
     "name" : "suite",
     "value" : "testcase"
@@ -37,7 +43,7 @@
     "value" : "testcase"
   }, {
     "name" : "testMethod",
-    "value" : "test_step.TestUserHandling.test_deletion"
+    "value" : "test_shopping.TestMemberLogin.test_add_product_to_cart"
   }, {
     "name" : "package",
     "value" : "testcase"
@@ -50,11 +56,11 @@
   "hidden" : false,
   "retry" : false,
   "extra" : {
-    "severity" : "critical",
+    "severity" : "normal",
     "retries" : [ ],
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "b4f6a7407b509854.json",
+  "source" : "cbf39876fe6fd342.json",
   "parameterValues" : [ ]
 }

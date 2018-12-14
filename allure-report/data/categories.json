@@ -7,13 +7,13 @@
       "name" : "AssertionError: assert 0",
       "children" : [ {
         "name" : "test_step.TestUserHandling.test_modification",
-        "uid" : "af9b030b25a5720b",
+        "uid" : "936be531995455",
         "parentUid" : "c9c77d7ae15b4ab6e63220cefc19b68f",
         "status" : "failed",
         "time" : {
-          "start" : 1538720674877,
-          "stop" : 1538720674985,
-          "duration" : 108
+          "start" : 1538989383562,
+          "stop" : 1538989383688,
+          "duration" : 126
         },
         "flaky" : false,
         "parameters" : [ ]
