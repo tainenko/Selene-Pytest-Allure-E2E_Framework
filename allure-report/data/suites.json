@@ -5,97 +5,109 @@
     "name" : "testcase",
     "children" : [ {
       "name" : "test_login.TestMemberLogin.test_user_can_not_login_with_empty_verifySN",
-      "uid" : "fc61e128dad02bbc",
+      "uid" : "9a2852404d9194d2",
       "parentUid" : "7d3977dcbf31acd3e26ecbe96342e45e",
       "status" : "passed",
       "time" : {
-        "start" : 1538989333820,
-        "stop" : 1538989340828,
-        "duration" : 7008
+        "start" : 1544968598836,
+        "stop" : 1544968606251,
+        "duration" : 7415
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "test_login.TestMemberLogin.test_user_login_fail",
+      "uid" : "a63491e9abc30887",
+      "parentUid" : "7d3977dcbf31acd3e26ecbe96342e45e",
+      "status" : "failed",
+      "time" : {
+        "start" : 1544968607258,
+        "stop" : 1544968615425,
+        "duration" : 8167
       },
       "flaky" : false,
       "parameters" : [ ]
     }, {
       "name" : "test_login.TestMemberLogin.test_user_can_login_and_logout",
-      "uid" : "ceb32de11a083ac0",
+      "uid" : "9f531518d6aa7d88",
       "parentUid" : "7d3977dcbf31acd3e26ecbe96342e45e",
       "status" : "passed",
       "time" : {
-        "start" : 1538989340833,
-        "stop" : 1538989364150,
-        "duration" : 23317
+        "start" : 1544968616364,
+        "stop" : 1544968659080,
+        "duration" : 42716
       },
       "flaky" : false,
       "parameters" : [ ]
     }, {
       "name" : "test_shopping.TestMemberLogin.test_user_can_login_and_logout",
-      "uid" : "a018158f0988184b",
+      "uid" : "11291e20fd38c476",
       "parentUid" : "7d3977dcbf31acd3e26ecbe96342e45e",
       "status" : "passed",
       "time" : {
-        "start" : 1538989364153,
-        "stop" : 1538989374981,
-        "duration" : 10828
+        "start" : 1544968660202,
+        "stop" : 1544968665516,
+        "duration" : 5314
       },
       "flaky" : false,
       "parameters" : [ ]
     }, {
       "name" : "test_shopping.TestMemberLogin.test_add_product_to_cart",
-      "uid" : "cbf39876fe6fd342",
+      "uid" : "c863bb5643ed966a",
       "parentUid" : "7d3977dcbf31acd3e26ecbe96342e45e",
       "status" : "passed",
       "time" : {
-        "start" : 1538989374984,
-        "stop" : 1538989383559,
-        "duration" : 8575
+        "start" : 1544968666455,
+        "stop" : 1544968698753,
+        "duration" : 32298
       },
       "flaky" : false,
       "parameters" : [ ]
     }, {
       "name" : "test_step.TestUserHandling.test_login",
-      "uid" : "8270e4f6d0a6ada9",
+      "uid" : "1dcff7a1e64d9eb0",
       "parentUid" : "7d3977dcbf31acd3e26ecbe96342e45e",
       "status" : "passed",
       "time" : {
-        "start" : 1538989383560,
-        "stop" : 1538989383561,
-        "duration" : 1
+        "start" : 1544968699282,
+        "stop" : 1544968699285,
+        "duration" : 3
       },
       "flaky" : false,
       "parameters" : [ ]
     }, {
       "name" : "test_step.TestUserHandling.test_modification",
-      "uid" : "936be531995455",
+      "uid" : "79c9e20b48422e05",
       "parentUid" : "7d3977dcbf31acd3e26ecbe96342e45e",
       "status" : "failed",
       "time" : {
-        "start" : 1538989383562,
-        "stop" : 1538989383688,
-        "duration" : 126
+        "start" : 1544968699672,
+        "stop" : 1544968699675,
+        "duration" : 3
       },
       "flaky" : false,
       "parameters" : [ ]
     }, {
       "name" : "test_step.TestUserHandling.test_deletion",
-      "uid" : "d5c3ffc14b35cdd8",
+      "uid" : "a2d516a23757d3ac",
       "parentUid" : "7d3977dcbf31acd3e26ecbe96342e45e",
       "status" : "passed",
       "time" : {
-        "start" : 1538989383690,
-        "stop" : 1538989383692,
+        "start" : 1544968700047,
+        "stop" : 1544968700049,
         "duration" : 2
       },
       "flaky" : false,
       "parameters" : [ ]
     }, {
       "name" : "test_step.test_normal",
-      "uid" : "e67955488d2a5c39",
+      "uid" : "a99f9b7b76302ef6",
       "parentUid" : "7d3977dcbf31acd3e26ecbe96342e45e",
       "status" : "passed",
       "time" : {
-        "start" : 1538989383693,
-        "stop" : 1538989383695,
-        "duration" : 2
+        "start" : 1544968700417,
+        "stop" : 1544968700418,
+        "duration" : 1
       },
       "flaky" : false,
       "parameters" : [ ]

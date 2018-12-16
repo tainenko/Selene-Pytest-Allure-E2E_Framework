@@ -4,12 +4,12 @@
     "uid" : "3d3ba2ccbb2868330d7adfee441ead7c",
     "name" : "會員登入功能",
     "statistic" : {
-      "failed" : 0,
+      "failed" : 1,
       "broken" : 0,
       "skipped" : 0,
       "passed" : 2,
       "unknown" : 0,
-      "total" : 2
+      "total" : 3
     }
   }, {
     "uid" : "c321c90f398b9f52a21af39c746b7018",

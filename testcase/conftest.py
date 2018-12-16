@@ -25,12 +25,10 @@ def setup_browser():
     config.base_url = "https://www.etmall.com.tw"
     config.app_host = ''
 
-    '''
     # turn off selene auto-screenshots
     from selene import helpers
     helpers.take_screenshot = lambda *x: "See attachments"
     yield None
-    '''
 
 @pytest.fixture(scope="session", autouse=True)
 def allure_config():
@@ -46,7 +44,7 @@ def pytest_runtest_makereport(item, call):
     return rep
 
 
-@pytest.fixture(scope="function")
+@pytest.fixture(scope="function",autouse=True)
 def screenshot_on_failure(request):
     yield None
     attach = browser.driver().get_screenshot_as_png()
@@ -60,6 +58,6 @@ def screenshot_on_failure(request):
 @pytest.fixture()
 def reset_driver_state():
     browser.visit(base_url)
-
     yield None
     browser.driver().delete_all_cookies()
+    browser.driver().close()

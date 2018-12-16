@@ -3,9 +3,11 @@ url = "https://pypi.python.org/simple"
 verify_ssl = true
 
 [packages]
-selene = "==1.0.0a14"
-pytest = "*"
+pytest = "3.5"
 requests = "*"
 pytest-allure-adaptor = "*"
 baidu-aip = "*"
 PILLOW ="*"
+
+[dev-packages]
+selene = "*"

@@ -11,7 +11,7 @@ class LoginPage(BasePage):
     def __init__(self):
         self.username_input =s("input#loginID.n-form--control")   # 手機Email身分證字號
         self.password_input =s("input#password.n-form--control")  # 密碼
-        self.loginBtn =s("button#login.n-btn.sendGA")             # 登入Btn
+        self.loginBtn =s("button#login.n-btn.sendGAWithoutCancelBubble")             # 登入Btn
         self.verifySN_input =s("input#validCode.n-form--control") # 驗證碼
         self.loginTitle =s("div.n-title--18.n-m-bottom--xs.n-text--center")# Title:會員登入
         self.loginDescription =s("label.n-form--title")           # 手機Email身分字號三擇一
@@ -45,16 +45,16 @@ class LoginPage(BasePage):
         SECRET_KEY="QC4GK0NGlP4NPfEUCctictuZay6BQQ1Y"
         client=AipOcr(APP_ID,API_KEY,SECRET_KEY)
         #read screenshot imgae of verifyImg
-        image=open('temp/img.png','rb').read()
+        image=open('temp/verifySN.png','rb').read()
         #get image Ocr result
         result = client.basicGeneral(image)['words_result'][0]['words']
         return re.sub("[^0-9]", "", result)
     '''
     def get_verifyImg_screen_shot(self,seleneElement):
-        browser.take_screenshot("temp", "img")
+        browser.driver().save_screenshot("./temp/verifySN.png")
         location = seleneElement.location
         size = seleneElement.size
-        img = Image.open("temp/img.png")
+        img = Image.open("./temp/verifySN.png")
         left = location['x']
         top = location['y']
         right = location['x'] + size['width']
@@ -75,7 +75,7 @@ class LoginPage(BasePage):
 
     def get_verify_code_str(self):
         browser.open_url("/Product/CreateCaptcha?count=1")
-        browser.take_screenshot("./temp", "img")
+        browser.driver().save_screenshot("./temp/verifySN.png")
         browser.driver().back()
         return self.get_verify_code_with_baidu_ocr()
 
