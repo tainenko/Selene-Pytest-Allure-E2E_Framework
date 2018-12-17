@@ -6,23 +6,30 @@ from selene.browsers import BrowserName
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
-browser_instance = env('selene_browser_name') or config.BrowserName.CHROME
-base_url = "https://www.etmall.com.tw"
+browser_instance = env('SELENE_BROWSER_NAME') or config.BrowserName.CHROME
+base_url =env('SELENE_BASE_URL') or "https://www.etmall.com.tw"
 
 
-@pytest.fixture(scope="session", autouse=True)
+def pytest_addoption(parser):
+    parser.addoption("--platform",action="store",default="chrome",
+                     help="option:chrome, firefox and  edge")
+    parser.addoption("--stage",action="store",default="lab",
+                     help="option:lab,mgt,stg,prd,g1,g2")
+'''
+@pytest.fixture
+def platform(request):
+    return request.config.getoption("--platform")
+'''
+
+def setup_platform(platform):
+    return print(platform)
+
+@pytest.fixture(scope="session", autouse=False)
 def setup_browser():
-    options = Options()
-    prefs = {'profile.default_content_setting_values': {'notifications': 2}}#關閉chrome顯示通知
-    options.add_experimental_option('prefs', prefs)
-    options.add_argument('--window-size=1280,1024')
-    driver = webdriver.Chrome(chrome_options=options)
-    browser.set_driver(driver)
-
     config.browser_name = BrowserName.CHROME
-    config.start_maximized = True
+    #config.start_maximized = True
     #config.hold_browser_open = True
-    config.base_url = "https://www.etmall.com.tw"
+    config.base_url = base_url
     config.app_host = ''
 
     # turn off selene auto-screenshots
@@ -44,7 +51,7 @@ def pytest_runtest_makereport(item, call):
     return rep
 
 
-@pytest.fixture(scope="function",autouse=True)
+@pytest.fixture(scope="function",autouse=False)
 def screenshot_on_failure(request):
     yield None
     attach = browser.driver().get_screenshot_as_png()
@@ -55,9 +62,15 @@ def screenshot_on_failure(request):
             allure.attach(request.function.__name__, attach, allure.attach_type.PNG)
 
 
-@pytest.fixture()
+@pytest.fixture(scope='session',autouse=False)
 def reset_driver_state():
-    browser.visit(base_url)
+    options = Options()
+    prefs = {'profile.default_content_setting_values': {'notifications': 2}}  # 關閉chrome顯示通知
+    options.add_experimental_option('prefs', prefs)
+    options.add_argument('--window-size=1280,1024')
+    driver = webdriver.Chrome(chrome_options=options)
+    browser.set_driver(driver)
+    browser.open_url(base_url)
     yield None
     browser.driver().delete_all_cookies()
     browser.driver().close()

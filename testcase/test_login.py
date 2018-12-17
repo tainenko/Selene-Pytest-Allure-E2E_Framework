@@ -57,7 +57,5 @@ class TestMemberLogin(object):
         with allure.step("成功登出，登入Btn可點擊"):pass
         main_page.loginbtn.should(be.clickable)
 
-    def teardown_module(self):
-        browser.close()
 
 

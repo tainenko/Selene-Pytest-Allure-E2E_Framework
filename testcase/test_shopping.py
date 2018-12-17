@@ -33,5 +33,3 @@ class TestMemberLogin(object):
         cartstep1 = proddetail.go_to_cart_step1_page()
         cartstep1.deliveryTab.should(be.clickable)
 
-    def teardown_module(self):
-        browser.close()

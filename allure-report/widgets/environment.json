@@ -1,10 +1,1 @@
-[ {
-  "values" : [ "https://www.etmall.com.tw" ],
-  "name" : "hostname"
-}, {
-  "values" : [ "chrome" ],
-  "name" : "browser"
-}, {
-  "values" : [ "Web Automation Report" ],
-  "name" : "report"
-} ]
+[ ]
