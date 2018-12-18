@@ -24,7 +24,7 @@ def platform(request):
 def setup_platform(platform):
     return print(platform)
 
-@pytest.fixture(scope="session", autouse=False)
+@pytest.fixture(scope="session", autouse=True)
 def setup_browser():
     config.browser_name = BrowserName.CHROME
     #config.start_maximized = True
@@ -51,7 +51,7 @@ def pytest_runtest_makereport(item, call):
     return rep
 
 
-@pytest.fixture(scope="function",autouse=False)
+@pytest.fixture(scope="function",autouse=True)
 def screenshot_on_failure(request):
     yield None
     attach = browser.driver().get_screenshot_as_png()
@@ -62,8 +62,8 @@ def screenshot_on_failure(request):
             allure.attach(request.function.__name__, attach, allure.attach_type.PNG)
 
 
-@pytest.fixture(scope='session',autouse=False)
-def reset_driver_state():
+@pytest.fixture(scope='session',autouse=True)
+def reset_driver_state(variables):
     options = Options()
     prefs = {'profile.default_content_setting_values': {'notifications': 2}}  # 關閉chrome顯示通知
     options.add_experimental_option('prefs', prefs)
@@ -71,6 +71,7 @@ def reset_driver_state():
     driver = webdriver.Chrome(chrome_options=options)
     browser.set_driver(driver)
     browser.open_url(base_url)
+    data=variables
     yield None
     browser.driver().delete_all_cookies()
     browser.driver().close()
