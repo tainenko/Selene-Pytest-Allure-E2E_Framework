@@ -2,46 +2,59 @@ from common_imports import *
 from selene.helpers import env
 from selene import config
 from selene.browsers import BrowserName
-
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
-browser_instance = env('SELENE_BROWSER_NAME') or config.BrowserName.CHROME
-base_url =env('SELENE_BASE_URL') or "https://www.etmall.com.tw"
-
-
 def pytest_addoption(parser):
-    parser.addoption("--platform",action="store",default="chrome",
-                     help="option:chrome, firefox and  edge")
-    parser.addoption("--stage",action="store",default="lab",
-                     help="option:lab,mgt,stg,prd,g1,g2")
-'''
+    parser.addoption("--platform",action="store",default="CHROME",
+                     help="option:chrome and firefox.")
+
 @pytest.fixture
 def platform(request):
     return request.config.getoption("--platform")
-'''
 
-def setup_platform(platform):
-    return print(platform)
+def set_browser_options(platform):
+    if platform =='CHROME':
+        config.browser_name = BrowserName.CHROME
+        options = Options()
+        prefs = {'profile.default_content_setting_values': {'notifications': 2}}  # 關閉chrome顯示通知
+        options.add_experimental_option('prefs', prefs)
+        options.add_argument(--start - maximized) #設定瀏覽器大小
+        #options.add_argument('--window-size=1920,10280')
+        driver = webdriver.Chrome(chrome_options=options)
+        browser.set_driver(driver)
+    elif platform =='FIREFOX':
+        config.browser_name= BrowserName.FIREFOX
+    else:
+        print("Sorry, the browser is not supported yet.")
+    #elif platform =='EDGE':
+    #    config.browser_name=BrowserName.EDGE
 
-@pytest.fixture(scope="session", autouse=True)
+@pytest.fixture(scope="module", autouse=True)
 def setup_browser():
     config.browser_name = BrowserName.CHROME
-    #config.start_maximized = True
-    #config.hold_browser_open = True
-    config.base_url = base_url
-    config.app_host = ''
+    options = Options()
+    prefs = {'profile.default_content_setting_values': {'notifications': 2}}  # 關閉chrome顯示通知
+    options.add_experimental_option('prefs', prefs)
+    options.add_argument("--start-maximized") # 設定瀏覽器大小
+    #options.add_argument('--window-size=1920,1080')
+    driver = webdriver.Chrome(chrome_options=options)
+    browser.set_driver(driver)
+    config.base_url=env('SELENE_BASE_URL')
+    config.apphost=""
 
-    # turn off selene auto-screenshots
-    from selene import helpers
+    from selene import helpers # 關閉selene測試失敗時自動截圖功能
     helpers.take_screenshot = lambda *x: "See attachments"
     yield None
+    browser.driver().delete_all_cookies() #teardown: reset the state of driver
+    browser.driver().quit()
 
 @pytest.fixture(scope="session", autouse=True)
 def allure_config():
     # setup allure environment
-    allure.environment(report="Web Automation Report", browser=browser_instance, hostname=base_url)
-
+    allure.environment(report="Web Automation Report--"+env('Web_ENV'),
+                       browser=env('SELENE_BROWSER_NAME'),
+                       hostname=env('SELENE_BASE_URL'))
 
 @pytest.mark.hookwrapper
 def pytest_runtest_makereport(item, call):
@@ -49,7 +62,6 @@ def pytest_runtest_makereport(item, call):
     rep = outcome.get_result()
     setattr(item, "rep_" + rep.when, rep)
     return rep
-
 
 @pytest.fixture(scope="function",autouse=True)
 def screenshot_on_failure(request):
@@ -60,18 +72,3 @@ def screenshot_on_failure(request):
     elif request.node.rep_setup.passed:
         if request.node.rep_call.failed:
             allure.attach(request.function.__name__, attach, allure.attach_type.PNG)
-
-
-@pytest.fixture(scope='session',autouse=True)
-def reset_driver_state(variables):
-    options = Options()
-    prefs = {'profile.default_content_setting_values': {'notifications': 2}}  # 關閉chrome顯示通知
-    options.add_experimental_option('prefs', prefs)
-    options.add_argument('--window-size=1280,1024')
-    driver = webdriver.Chrome(chrome_options=options)
-    browser.set_driver(driver)
-    browser.open_url(base_url)
-    data=variables
-    yield None
-    browser.driver().delete_all_cookies()
-    browser.driver().close()

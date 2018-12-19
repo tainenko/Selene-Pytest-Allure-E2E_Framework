@@ -1,20 +1,15 @@
 # -*- coding: utf-8 -*-
 from common_imports import *
-
 from src.pages.login_page import LoginPage
 
 
 @allure.feature('會員登入功能')  # feature定义功能
 @pytest.mark.incremental
 class TestMemberLogin(object):
-
-    user = variables['user']
-    password = variables['password']
-    def get_data(self,variables):
-        return variables
-
     @allure.story('登入驗証碼NULL')
-    def test_user_can_not_login_with_empty_verifySN(self):
+    def test_user_can_not_login_with_empty_verifySN(self,variables):
+        user=variables['user']
+        password=variables['password']
         with allure.step("輸入帳號密碼"):  # 将一个测试用例分成几个步骤，将步骤打印到测试报告中，步骤2
             allure.attach('帳號', 'eitctest001')  # attach可以打印一些附加信息
             allure.attach('密碼', 'abc12345')
@@ -26,7 +21,9 @@ class TestMemberLogin(object):
          .should(have.exact_text("必須填寫驗證碼")))
 
     @allure.story('登入驗証碼失敗')
-    def test_user_login_fail(self):
+    def test_user_login_fail(self,variables):
+        user=variables['user']
+        password=variables['password']
         with allure.step('開啟登入頁'):pass
         login = LoginPage().open_login_page()
         with allure.step("輸入帳號、密碼，點擊登入Btn"):
@@ -43,10 +40,10 @@ class TestMemberLogin(object):
         with allure.step("成功登出，登入Btn可點擊"):pass
         main_page.loginbtn.should(be.clickable)
 
-
-
     @allure.story('會員登入與登出功能')
-    def test_user_can_login_and_logout(self):
+    def test_user_can_login_and_logout(self,variables):
+        user=variables['user']
+        password=variables['password']
         with allure.step('開啟登入頁'):pass
         login = LoginPage().open_login_page()
         with allure.step("輸入帳號、密碼，點擊登入Btn"):
