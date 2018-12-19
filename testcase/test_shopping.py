@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from common_imports import *
+from common import *
 
 from src.pages.main_page import MainPage
 from src.pages.login_page import LoginPage
@@ -25,9 +25,9 @@ class TestMemberLogin(object):
 
 
     @allure.story('加入購物車')
-    def test_add_product_to_cart(self):
+    def test_add_product_to_cart(self,variables):
         proddetail=ProductDetailPage()
-        proddetail.open_proddetail_page()
+        proddetail.open_proddetail_page(variables["product"])
         proddetail.click_go_to_checkout()
         proddetail.than()
         cartstep1 = proddetail.go_to_cart_step1_page()

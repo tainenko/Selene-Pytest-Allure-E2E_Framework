@@ -1,4 +1,4 @@
-from common_imports import *
+from common import *
 from selene.helpers import env
 from selene import config
 from selene.browsers import BrowserName
@@ -37,7 +37,7 @@ def setup_browser():
     prefs = {'profile.default_content_setting_values': {'notifications': 2}}  # 關閉chrome顯示通知
     options.add_experimental_option('prefs', prefs)
     options.add_argument("--start-maximized") # 設定瀏覽器大小
-    #options.add_argument('--window-size=1920,1080')
+    #options.add_argument('--window-size=1920,1280')
     driver = webdriver.Chrome(chrome_options=options)
     browser.set_driver(driver)
     config.base_url=env('SELENE_BASE_URL')

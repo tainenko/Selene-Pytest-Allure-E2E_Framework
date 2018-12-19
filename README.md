@@ -10,7 +10,13 @@
 
 指定執行特定features或者stories一部皆測試用例，比如執行"購物車功能"下的"加入購物車"子功能之測試用例：   
 	$ py.test testcase/ --allure_features='會員登入功能' --allure_stories='會員登入與登出功能'
-
+###Pytest-plugin
+pytest-env  
+pip install pytest-env  
+pytest-variable  
+$ pip install pytest-variables[yaml]  
+pytest-rerunfailures  
+pip install pytest-rerunfailures  
 ### Allure  
 @allure.feature # 用於定義被測試的功能，被測產品的需求點 
 @allure.story # 用於定義被測功能的用戶場景，即子功能點  

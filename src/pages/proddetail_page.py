@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from common_imports import *
+from common import *
 
 from src.pages.page import BasePage
 from src.pages.cartstep1_page import CartStep1Page
@@ -21,7 +21,7 @@ class ProductDetailPage(BasePage):
         self.soldout=s('a.n-btn.n-btn--disabled[title="銷售一空"]')#銷售一空
         self.arrivalNotice=s('a.n-btn.n-btn--normal[data-action="ProdDetail_UpPurchaseInfo_ArrivalNotice"]')#貨到通知
 
-    def open_proddetail_page(self,goodid='1990867'):
+    def open_proddetail_page(self,goodid):
         browser.open_url('/i/'+goodid)
         return self
 
@@ -37,7 +37,6 @@ class ProductDetailPage(BasePage):
         self.goToCheckout.click()
         return self
 
-
     def get_normal_delivery_goodid(self):
         return '1990867'
     def get_fast_delivery_goodid(self):
@@ -48,7 +47,6 @@ class ProductDetailPage(BasePage):
         return '5937027'
     def get_frozen_store_pick_up_goodid(self):
         return '1989568'
-
 
     def than(self):
         return self

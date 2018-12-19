@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from common_imports import *
+from common import *
 
 from src.pages.page import BasePage
 
