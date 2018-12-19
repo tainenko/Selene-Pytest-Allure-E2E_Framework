@@ -1,0 +1,4 @@
+allure-report/*
+result/*
+testcase/test_presetting.py
+testcase/__pycache__/*

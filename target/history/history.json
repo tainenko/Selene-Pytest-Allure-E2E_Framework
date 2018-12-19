@@ -1,0 +1,41 @@
+{
+  "33cf63bfd72e67803876867a5d37a1b6" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "e54faec10d2d6dc",
+      "status" : "failed",
+      "statusDetails" : "AttributeError: 'find_element_by_class_name' object has no attribute 'get_screenshot_as_file'",
+      "time" : {
+        "start" : 1538587720912,
+        "stop" : 1538587721338,
+        "duration" : 426
+      }
+    } ]
+  },
+  "1d774bbc36072f3e1176ea4aaf40222a" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "eb59e1e3ec54241b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1538587717114,
+        "stop" : 1538587720909,
+        "duration" : 3795
+      }
+    } ]
+  }
+}
