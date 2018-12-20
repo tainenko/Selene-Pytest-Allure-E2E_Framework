@@ -51,6 +51,7 @@ def setup_browser():
     options.add_argument('--headless')
     options.add_argument('--no-sandbox')
     options.add_argument('--disable-dev-shm-usage')
+    options.add_argument('--ignore-certificate-errors')
     driver = webdriver.Chrome(chrome_options=options)
     browser.set_driver(driver)
     config.base_url=env('SELENE_BASE_URL')

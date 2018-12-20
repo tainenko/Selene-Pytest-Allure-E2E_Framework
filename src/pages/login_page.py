@@ -75,7 +75,8 @@ class LoginPage(BasePage):
 
     def get_verify_code_str(self):
         browser.open_url("/Product/CreateCaptcha?count=1")
-        browser.driver().save_screenshot("./temp/verifySN.png")
+        #browser.driver().save_screenshot("./temp/verifySN.png")
+        browser.driver().get_screenshot_as_file("./temp/verifySN.png")
         browser.driver().back()
         return self.get_verify_code_with_baidu_ocr()
 
