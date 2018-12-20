@@ -4,6 +4,9 @@ from selene import config
 from selene.browsers import BrowserName
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+from pyvirtualdisplay import Display
+
+
 
 def pytest_addoption(parser):
     parser.addoption("--platform",action="store",default="CHROME",
@@ -30,6 +33,12 @@ def set_browser_options(platform):
     #elif platform =='EDGE':
     #    config.browser_name=BrowserName.EDGE
 
+@pytest.fixture(scope="session",autouse=True)
+def setup_display():
+    # Set screen resolution to 1920x1280
+    display = Display(visible=0, size=(1920, 1280))
+    display.start()
+    
 @pytest.fixture(scope="module", autouse=True)
 def setup_browser():
     config.browser_name = BrowserName.CHROME

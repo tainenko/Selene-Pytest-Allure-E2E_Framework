@@ -8,7 +8,7 @@ pytest-allure-adaptor = "*"
 baidu-aip = "*"
 PILLOW ="*"
 selene = "*"
-pytest = "==3.5"
+pytest = "==3.6"
 
 [dev-packages]
 
