@@ -1,11 +1,12 @@
 From ubuntu:latest
-MAINTAINER tony.ko@ehsn.com.tw
+MAINTAINER Tony.ko <tony.ko@ehsn.com.tw>
 #update apt-get and install tools
 Run apt-get update
 Run apt-get install -y wget curl unzip vim git
 #install python3、pip3 and dependent packages
 Run apt-get install -y python3-pip
 Run pip3 install pytest==3.5
+Run pip3 install pytest-allure-adaptor
 Run pip3 install selene --pre
 Run pip3 install pytest-rerunfailures
 Run pip3 install pytest-env
