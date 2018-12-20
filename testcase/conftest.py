@@ -45,8 +45,8 @@ def setup_browser():
     options = Options()
     prefs = {'profile.default_content_setting_values': {'notifications': 2}}  # 關閉chrome顯示通知
     options.add_experimental_option('prefs', prefs)
-    options.add_argument("--start-maximized") # 設定瀏覽器大小
-    #options.add_argument('--window-size=1920,1280')
+    #options.add_argument("--start-maximized") # 設定瀏覽器大小
+    options.add_argument('--window-size=1920,1280')
     options.add_argument('--disable-gpu')
     options.add_argument('--headless')
     options.add_argument('--no-sandbox')

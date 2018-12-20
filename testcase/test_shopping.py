@@ -10,7 +10,7 @@ from src.pages.cartstep1_page import CartStep1Page
 
 @allure.feature('結帳功能')
 @pytest.mark.incremental
-class TestMemberLogin(object):
+class TestShoppingProcess(object):
 
     @allure.story('會員登入')
     def test_user_can_login_and_logout(self):
