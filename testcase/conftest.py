@@ -4,7 +4,7 @@ from selene import config
 from selene.browsers import BrowserName
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
-from pyvirtualdisplay import Display
+#from pyvirtualdisplay import Display
 
 
 
@@ -33,12 +33,12 @@ def set_browser_options(platform):
     #elif platform =='EDGE':
     #    config.browser_name=BrowserName.EDGE
 
-@pytest.fixture(scope="session",autouse=True)
-def setup_display():
-    # Set screen resolution to 1920x1280
-    display = Display(visible=0, size=(1920, 1280))
-    display.start()
-    
+#@pytest.fixture(scope="session",autouse=True)
+#def setup_display():
+#    # Set screen resolution to 1920x1280
+#    display = Display(visible=0, size=(1920, 1280))
+#    display.start()
+
 @pytest.fixture(scope="module", autouse=True)
 def setup_browser():
     config.browser_name = BrowserName.CHROME
@@ -47,6 +47,10 @@ def setup_browser():
     options.add_experimental_option('prefs', prefs)
     options.add_argument("--start-maximized") # 設定瀏覽器大小
     #options.add_argument('--window-size=1920,1280')
+    options.add_argument('--disable-gpu')
+    options.add_argument('--headless')
+    options.add_argument('--no-sandbox')
+    options.add_argument('--disable-dev-shm-usage')
     driver = webdriver.Chrome(chrome_options=options)
     browser.set_driver(driver)
     config.base_url=env('SELENE_BASE_URL')
