@@ -60,5 +60,15 @@ class TestMemberLogin(object):
         with allure.step("成功登出，登入Btn可點擊"):pass
         main_page.loginbtn.should(be.clickable)
 
+    @allure.story('驗證碼截圖與辨識')
+    def test_verifySN_image_screenshot_and_ocr_result(self):
+        with allure.step('開啟登入頁'):pass
+        loginpage = LoginPage().open_login_page()
+        with allure.step("對驗證碼截圖"):pass
+        loginpage.get_verifyImg_screen_shot(loginpage.verifyCodeImg)
+        with allure.step("透過baidu-ocr辨識驗證碼"):pass
+        str.get_verify_code_with_baidu_ocr()
+        with allure.step("確認驗證碼為數字"):pass
+        assert str.isdigit()
 
 
