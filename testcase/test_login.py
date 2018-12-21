@@ -13,12 +13,12 @@ class TestMemberLogin(object):
         with allure.step("輸入帳號密碼"):
             allure.attach('帳號', 'eitctest001')
             allure.attach('密碼', 'abc12345')
-        LoginPage()
-         .open_login_page()
-         .login_with_invalid_verifySN(user, password, "")
-         .than()
-         .validationErr
-         .should(have.exact_text("必須填寫驗證碼"))
+        LoginPage()\
+            .open_login_page()\
+            .login_with_invalid_verifySN(user, password, "")\
+            .than()\
+            .validationErr\
+            .should(have.exact_text("必須填寫驗證碼"))
 
     @allure.story('登入驗証碼失敗')
     def test_user_login_fail(self,variables):
