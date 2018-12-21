@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 from common import *
-
 from src.pages.page import BasePage
 from src.pages.main_page import MainPage
 from aip import AipOcr
