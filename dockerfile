@@ -31,3 +31,6 @@ Run ln -s /usr/local/share/chromedriver /usr/bin/chromedriver
 #Install Allure
 Run apt-get install -y openjdk-8-jdk
 Run curl -o allure-2.6.0.tgz -Ls https://dl.bintray.com/qameta/generic/io/qameta/allure/allure/2.6.0/allure-2.6.0.tgz && tar -zxvf allure-2.6.0.tgz -C /opt/ && ln -s /opt/allure-2.6.0/bin/allure /usr/bin/allure && allure --version
+#Install chinese-zh language package
+apt-get install -y ttf-wqy-microhei ttf-wqy-zenhei xfonts-wqy
+sudo apt-get install  language-pack-zh-han*

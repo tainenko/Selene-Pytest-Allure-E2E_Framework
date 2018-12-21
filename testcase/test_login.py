@@ -3,22 +3,22 @@ from common import *
 from src.pages.login_page import LoginPage
 
 
-@allure.feature('會員登入功能')  # feature定义功能
+@allure.feature('會員登入功能')
 @pytest.mark.incremental
 class TestMemberLogin(object):
     @allure.story('登入驗証碼NULL')
     def test_user_can_not_login_with_empty_verifySN(self,variables):
         user=variables['user']
         password=variables['password']
-        with allure.step("輸入帳號密碼"):  # 将一个测试用例分成几个步骤，将步骤打印到测试报告中，步骤2
-            allure.attach('帳號', 'eitctest001')  # attach可以打印一些附加信息
+        with allure.step("輸入帳號密碼"):
+            allure.attach('帳號', 'eitctest001')
             allure.attach('密碼', 'abc12345')
-        (LoginPage()
+        LoginPage()
          .open_login_page()
          .login_with_invalid_verifySN(user, password, "")
          .than()
          .validationErr
-         .should(have.exact_text("必須填寫驗證碼")))
+         .should(have.exact_text("必須填寫驗證碼"))
 
     @allure.story('登入驗証碼失敗')
     def test_user_login_fail(self,variables):

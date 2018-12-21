@@ -6,8 +6,6 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 #from pyvirtualdisplay import Display
 
-
-
 def pytest_addoption(parser):
     parser.addoption("--platform",action="store",default="CHROME",
                      help="option:chrome and firefox.")
