@@ -6,8 +6,6 @@ from src.pages.login_page import LoginPage
 from src.pages.proddetail_page import ProductDetailPage
 from src.pages.cartstep1_page import CartStep1Page
 
-
-
 @allure.feature('結帳功能')
 @pytest.mark.incremental
 class TestShoppingProcess(object):
@@ -22,7 +20,6 @@ class TestShoppingProcess(object):
         main_page = login.login_as("eitctest001@gmail.com", "abc12345").than_at_main_page()
         with allure.step("首頁的登入text必須visible，「xxx 您好」"): pass
         main_page.logontext.should(be.visible)
-
 
     @allure.story('加入購物車')
     def test_add_product_to_cart(self,variables):

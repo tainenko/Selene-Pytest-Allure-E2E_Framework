@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from common import *
 from src.pages.page import BasePage
+from src.pages.searchresult_page import SearchResultPage
 
 class MainPage(BasePage):
     def __init__(self):
@@ -51,7 +52,7 @@ class MainPage(BasePage):
         self.logoutbtn.click()
         return self
 
-    def input_search_keywork(self,keyword):
+    def input_search_keyword(self,keyword):
         self.searchbar.set_value(keyword)
         return self
 

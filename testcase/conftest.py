@@ -49,7 +49,7 @@ def setup_browser():
     options.add_argument('--window-size=1920,1280')
     options.add_argument('--ignore-certificate-errors')
     options.add_argument('--headless')
-    if platform.system() =="Linux":
+    if platform.system() =="Linux": #判斷以Linux執行時新增相關chrome-option參數
         options.add_argument('--disable-gpu')
         options.add_argument('--no-sandbox')
         options.add_argument('--disable-dev-shm-usage')
