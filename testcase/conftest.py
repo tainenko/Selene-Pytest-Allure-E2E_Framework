@@ -4,33 +4,35 @@ from selene import config
 from selene.browsers import BrowserName
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+import platform
+
 #from pyvirtualdisplay import Display
 
 def pytest_addoption(parser):
-    parser.addoption("--platform",action="store",default="CHROME",
+    parser.addoption("--browsertype",action="store",default="CHROME",
                      help="option:chrome and firefox.")
-
+'''
 @pytest.fixture
-def platform(request):
-    return request.config.getoption("--platform")
+def browsertype(request):
+    return request.config.getoption("--browsertype")
 
-def set_browser_options(platform):
-    if platform =='CHROME':
+def set_browser_options(browsertype):
+    if browsertype =='CHROME':
         config.browser_name = BrowserName.CHROME
         options = Options()
         prefs = {'profile.default_content_setting_values': {'notifications': 2}}  # 關閉chrome顯示通知
         options.add_experimental_option('prefs', prefs)
-        options.add_argument(--start - maximized) #設定瀏覽器大小
-        #options.add_argument('--window-size=1920,10280')
+        #options.add_argument(--start - maximized) #設定瀏覽器大小
+        options.add_argument('--window-size=1920,1280')
         driver = webdriver.Chrome(chrome_options=options)
         browser.set_driver(driver)
-    elif platform =='FIREFOX':
+    elif browsertype =='FIREFOX':
         config.browser_name= BrowserName.FIREFOX
     else:
         print("Sorry, the browser is not supported yet.")
     #elif platform =='EDGE':
     #    config.browser_name=BrowserName.EDGE
-
+'''
 #@pytest.fixture(scope="session",autouse=True)
 #def setup_display():
 #    # Set screen resolution to 1920x1280
@@ -45,13 +47,15 @@ def setup_browser():
     options.add_experimental_option('prefs', prefs)
     #options.add_argument("--start-maximized") # 設定瀏覽器大小
     options.add_argument('--window-size=1920,1280')
-    options.add_argument('--disable-gpu')
-    options.add_argument('--headless')
-    options.add_argument('--no-sandbox')
-    options.add_argument('--disable-dev-shm-usage')
     options.add_argument('--ignore-certificate-errors')
+    options.add_argument('--headless')
+    if platform.system() =="Linux":
+        options.add_argument('--disable-gpu')
+        options.add_argument('--no-sandbox')
+        options.add_argument('--disable-dev-shm-usage')
     driver = webdriver.Chrome(chrome_options=options)
     browser.set_driver(driver)
+    #set up base_url
     config.base_url=env('SELENE_BASE_URL')
     config.apphost=""
 
@@ -67,7 +71,6 @@ def allure_config():
     allure.environment(report="Web Automation Report--"+env('Web_ENV'),
                        browser=env('SELENE_BROWSER_NAME'),
                        hostname=env('SELENE_BASE_URL'))
-
 @pytest.mark.hookwrapper
 def pytest_runtest_makereport(item, call):
     outcome = yield

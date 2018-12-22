@@ -67,7 +67,7 @@ class TestMemberLogin(object):
         with allure.step("對驗證碼截圖"):pass
         loginpage.get_verifyImg_screen_shot(loginpage.verifyCodeImg)
         with allure.step("透過baidu-ocr辨識驗證碼"):pass
-        str.get_verify_code_with_baidu_ocr()
+        str=loginpage.get_verify_code_with_baidu_ocr()
         with allure.step("確認驗證碼為數字"):pass
         assert str.isdigit()
 

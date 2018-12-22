@@ -19,7 +19,7 @@
       }
     } ]
   },
-  "86f4a634584608d8364d2a64310c3189" : {
+  "d7f2e1377b0fece3e630672b3dbab5a2" : {
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
@@ -29,12 +29,12 @@
       "total" : 1
     },
     "items" : [ {
-      "uid" : "175fd2362ed7e146",
+      "uid" : "396ad13ef57f6db6",
       "status" : "passed",
       "time" : {
-        "start" : 1544935264866,
-        "stop" : 1544935264868,
-        "duration" : 2
+        "start" : 1545447385254,
+        "stop" : 1545447385257,
+        "duration" : 3
       }
     } ]
   },
@@ -43,11 +43,19 @@
       "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 1,
+      "passed" : 2,
       "unknown" : 0,
-      "total" : 1
+      "total" : 2
     },
     "items" : [ {
+      "uid" : "3af49c286fe2d663",
+      "status" : "passed",
+      "time" : {
+        "start" : 1545447334732,
+        "stop" : 1545447341668,
+        "duration" : 6936
+      }
+    }, {
       "uid" : "813082311753946a",
       "status" : "passed",
       "time" : {
@@ -62,36 +70,25 @@
       "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 1,
+      "passed" : 2,
       "unknown" : 0,
-      "total" : 1
+      "total" : 2
     },
     "items" : [ {
+      "uid" : "4a27c0ab2a3b9827",
+      "status" : "passed",
+      "time" : {
+        "start" : 1545447354299,
+        "stop" : 1545447370664,
+        "duration" : 16365
+      }
+    }, {
       "uid" : "e327fbf720b545a0",
       "status" : "passed",
       "time" : {
         "start" : 1544935228923,
         "stop" : 1544935244345,
         "duration" : 15422
-      }
-    } ]
-  },
-  "45288d06380433a07b0f5752f763f560" : {
-    "statistic" : {
-      "failed" : 0,
-      "broken" : 0,
-      "skipped" : 0,
-      "passed" : 1,
-      "unknown" : 0,
-      "total" : 1
-    },
-    "items" : [ {
-      "uid" : "ee83ad1994b055ad",
-      "status" : "passed",
-      "time" : {
-        "start" : 1544935264869,
-        "stop" : 1544935264870,
-        "duration" : 1
       }
     } ]
   },
@@ -111,6 +108,26 @@
         "start" : 1544935264858,
         "stop" : 1544935264861,
         "duration" : 3
+      }
+    } ]
+  },
+  "1224d67a8f53ef7b436b52bfd7a9d69c" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "3279d5951bdbe897",
+      "status" : "failed",
+      "statusDetails" : "WebDriverException: Message: unknown error: Element <button class=\"n-btn n-btn--search24\" type=\"submit\" data-category=\"All_Search\" data-action=\"All_Search_搜24H\" data-label=\"All_Search_搜24H\" data-reactid=\".c.0.0.2\">...</button> is not clickable at point (1294, 139). Other element would receive the click: <div class=\"HYPE_element\" id=\"hype-obj-O80GIL7CASGJ703P9EWF\" role=\"button\" aria-flowto=\"hype-obj-37PZDNEQAFNIV5XIAQJM\" style=\"pointer-events: auto; position: absolute; border-style: solid; opacity: 0; background-color: rgba(232, 235, 237, 0); cursor: pointer; border-width: 1px; border-color: rgba(216, 221, 228, 0); overflow: visible; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); z-index: 2; width: 734px; height: 373px; transform-origin: 50% 50% 0px; transform: translateX(0px) translateY(0px) rotateY(0deg);\"></div>\n  (Session info: headless chrome=71.0.3578.98)\n  (Driver info: chromedriver=2.41.578706 (5f725d1b4f0a4acbf5259df887244095596231db),platform=Mac OS X 10.14.2 x86_64)\n",
+      "time" : {
+        "start" : 1545447386327,
+        "stop" : 1545447397605,
+        "duration" : 11278
       }
     } ]
   },
@@ -134,6 +151,26 @@
       }
     } ]
   },
+  "dd5f20dde105875f7b3533b01a6f6bc7" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "99071c7bb467aa7f",
+      "status" : "failed",
+      "statusDetails" : "IndexError: list index out of range",
+      "time" : {
+        "start" : 1545447374688,
+        "stop" : 1545447378030,
+        "duration" : 3342
+      }
+    } ]
+  },
   "9791e66c901b08d81ed4b55e4f6e2793" : {
     "statistic" : {
       "failed" : 1,
@@ -151,6 +188,142 @@
         "start" : 1544935244346,
         "stop" : 1544935252512,
         "duration" : 8166
+      }
+    } ]
+  },
+  "9cde83ece3066398041cfd2a2413d06a" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "5b5c78aedaa4b5b3",
+      "status" : "failed",
+      "statusDetails" : "TimeoutException: Message: \n            failed while waiting 4 seconds\n            to assert Clickable\n            for first_by('css selector', 'ul.n-tab.n-tab--lv2#deliverTab')\n\n            reason: NoSuchElementException: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"ul.n-tab.n-tab--lv2#deliverTab\"}\n  (Session info: headless chrome=71.0.3578.98)\n  (Driver info: chromedriver=2.41.578706 (5f725d1b4f0a4acbf5259df887244095596231db),platform=Mac OS X 10.14.2 x86_64)\n            screenshot: file://See attachments\n",
+      "time" : {
+        "start" : 1545447419184,
+        "stop" : 1545447430011,
+        "duration" : 10827
+      }
+    } ]
+  },
+  "9128c3c2d22ee02e363fe5e24711f4c6" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "4026958f17e91381",
+      "status" : "failed",
+      "statusDetails" : "TimeoutException: Message: \n            failed while waiting 4 seconds\n            to assert Visible\n            for first_by('css selector', 'div#logon>ul>li>span')\n\n            reason: NoSuchElementException: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div#logon>ul>li>span\"}\n  (Session info: headless chrome=71.0.3578.98)\n  (Driver info: chromedriver=2.41.578706 (5f725d1b4f0a4acbf5259df887244095596231db),platform=Mac OS X 10.14.2 x86_64)\n            screenshot: file://See attachments\n",
+      "time" : {
+        "start" : 1545447343345,
+        "stop" : 1545447352798,
+        "duration" : 9453
+      }
+    } ]
+  },
+  "2bfff9d52e47d84bcbd5cf5ffff30302" : {
+    "statistic" : {
+      "failed" : 1,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "e95c7deeca058fec",
+      "status" : "failed",
+      "statusDetails" : "TimeoutException: Message: \n            failed while waiting 4 seconds\n            to assert Visible\n            for first_by('css selector', 'div#logon>ul>li>span')\n\n            reason: NoSuchElementException: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div#logon>ul>li>span\"}\n  (Session info: headless chrome=71.0.3578.98)\n  (Driver info: chromedriver=2.41.578706 (5f725d1b4f0a4acbf5259df887244095596231db),platform=Mac OS X 10.14.2 x86_64)\n            screenshot: file://See attachments\n",
+      "time" : {
+        "start" : 1545447402977,
+        "stop" : 1545447417940,
+        "duration" : 14963
+      }
+    } ]
+  },
+  "2e2221bafa9e9b14d39ac3c86f8cdfff" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "7a39a8f33a2c3874",
+      "status" : "passed",
+      "time" : {
+        "start" : 1545447383815,
+        "stop" : 1545447383819,
+        "duration" : 4
+      }
+    } ]
+  },
+  "86f4a634584608d8364d2a64310c3189" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "175fd2362ed7e146",
+      "status" : "passed",
+      "time" : {
+        "start" : 1544935264866,
+        "stop" : 1544935264868,
+        "duration" : 2
+      }
+    } ]
+  },
+  "45288d06380433a07b0f5752f763f560" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "ee83ad1994b055ad",
+      "status" : "passed",
+      "time" : {
+        "start" : 1544935264869,
+        "stop" : 1544935264870,
+        "duration" : 1
+      }
+    } ]
+  },
+  "473e37a0e2ecea07a015504599c65463" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "7c719e6986122aa",
+      "status" : "passed",
+      "time" : {
+        "start" : 1545447380497,
+        "stop" : 1545447382652,
+        "duration" : 2155
       }
     } ]
   }

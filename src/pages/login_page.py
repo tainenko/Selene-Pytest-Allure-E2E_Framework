@@ -60,7 +60,7 @@ class LoginPage(BasePage):
         bottom = location['y'] + size['height']
         img = img.crop((int(left), int(top), int(right), int(bottom)))
         img.resize((size['width'] * 2, size['height'] * 2), Image.BILINEAR)
-        img.save('./img.png')
+        img.save('./temp/verifySN.png')
         return self
 
     def login_as(self,user,passward):
