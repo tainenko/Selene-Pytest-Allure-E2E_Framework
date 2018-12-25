@@ -2,7 +2,7 @@ From ubuntu:latest
 MAINTAINER Tony.ko <tony.ko@ehsn.com.tw>
 #update apt-get and install tools
 Run apt-get update
-Run apt-get install -y wget curl unzip vim git
+Run apt-get install -y wget curl unzip vim git apt-utils
 #install python3、pip3 and dependent packages
 Run apt-get install -y python3-pip
 Run pip3 install pytest==3.6
@@ -13,7 +13,7 @@ Run pip3 install pytest-env
 Run pip3 install pytest-variables[yaml]
 Run pip3 install git+https://github.com/Baidu-AIP/python-sdk.git@master
 Run pip3 install PILLOW
-#install pyvirtual
+#install virtualdisplay for linux
 Run apt-get install -y xvfb
 Run pip3 install pyvirtualdisplay
 #install Chrome
@@ -32,5 +32,5 @@ Run ln -s /usr/local/share/chromedriver /usr/bin/chromedriver
 Run apt-get install -y openjdk-8-jdk
 Run curl -o allure-2.6.0.tgz -Ls https://dl.bintray.com/qameta/generic/io/qameta/allure/allure/2.6.0/allure-2.6.0.tgz && tar -zxvf allure-2.6.0.tgz -C /opt/ && ln -s /opt/allure-2.6.0/bin/allure /usr/bin/allure && allure --version
 #Install chinese-zh language package
-apt-get install -y ttf-wqy-microhei ttf-wqy-zenhei xfonts-wqy
-sudo apt-get install  language-pack-zh-han*
+Run apt-get install -y ttf-wqy-microhei ttf-wqy-zenhei xfonts-wqy
+Run apt-get install -y language-pack-zh-han*

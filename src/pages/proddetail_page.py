@@ -37,17 +37,6 @@ class ProductDetailPage(BasePage):
         self.goToCheckout.click()
         return self
 
-    def get_normal_delivery_goodid(self):
-        return '1990867'
-    def get_fast_delivery_goodid(self):
-        return '1942437'
-    def get_fast_store_pick_up_goodid(self):
-        return '2111897'
-    def get_store_pick_up_goodid(self):
-        return '5937027'
-    def get_frozen_store_pick_up_goodid(self):
-        return '1989568'
-
     def than(self):
         return self
 

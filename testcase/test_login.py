@@ -24,6 +24,7 @@ class TestMemberLogin(object):
     def test_user_login_fail(self,variables):
         user=variables['user']
         password=variables['password']
+
         with allure.step('開啟登入頁'):pass
         login = LoginPage().open_login_page()
         with allure.step("輸入帳號、密碼，點擊登入Btn"):
