@@ -68,7 +68,7 @@ def setup_browser():
 @pytest.fixture(scope="session", autouse=True)
 def allure_config():
     # setup allure environment
-    allure.environment(report="Web Automation Report--"+env('Web_ENV'),
+    allure.environment(report=env('Web_ENV')+"Web Automation",
                        browser=env('SELENE_BROWSER_NAME'),
                        hostname=env('SELENE_BASE_URL'))
 @pytest.mark.hookwrapper
