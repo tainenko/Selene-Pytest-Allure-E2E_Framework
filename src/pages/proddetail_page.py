@@ -21,7 +21,7 @@ class ProductDetailPage(BasePage):
         self.alertBackToShopping=s('a.n-btn n-btn--lv3')#alert繼續購物
         self.soldout=s('a.n-btn.n-btn--disabled[title="銷售一空"]')#銷售一空
         self.arrivalNotice=s('a.n-btn.n-btn--normal[data-action="ProdDetail_UpPurchaseInfo_ArrivalNotice"]')#貨到通知
-
+        self.infoclose=s('a.n-left.n-info--close') #關閉站內通知
 
     def open_proddetail_page(self,goodid):
         browser.open_url('/i/'+goodid)

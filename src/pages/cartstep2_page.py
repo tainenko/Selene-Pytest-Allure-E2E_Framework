@@ -10,7 +10,7 @@ class CartStep2Page(BasePage):
         self.CODtab = s(by.link_text('貨到付款'))
         self.storeCODtab=s(by.link_text('超商取貨付款'))
         self.familystore_btn =s('a#button-pickupFamilyStoreCVS') #全家
-        self.checkoutbtn=s('button.n-btn.n-btn--primary') #確認付款
+        self.checkoutbtn=s(by.text('確認付款')) #確認付款
 
     def click_ATM_tab(self):
         self.atmtab.click()
@@ -21,6 +21,7 @@ class CartStep2Page(BasePage):
         return self
 
     def click_checkout_button(self):
+        self.checkoutbtn.should(be.clickable)
         self.checkoutbtn.click()
         return CartStep3Page()
 
