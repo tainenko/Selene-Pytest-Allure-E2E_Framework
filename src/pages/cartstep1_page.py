@@ -12,6 +12,7 @@ class CartStep1Page(BasePage):
         self.storepickup_tab=s('li#17') #超商取貨
         self.frozenstorepickup=s('li#18') #冷凍超取
         self.checkoutbtn=s(by.text('我要結帳')) #我要結帳
+        self.product_img=s('ul.n-d-table__body-row>li.title-1') #商品圖
 
     def click_stroe_pick_up_tab(self):
         self.storepickup_tab.click()

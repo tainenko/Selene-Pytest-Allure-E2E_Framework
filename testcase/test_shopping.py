@@ -30,7 +30,7 @@ class TestShoppingProcess(object):
         proddetail.than()
         cartstep1 = proddetail.go_to_cart_step1_page()
         with allure.step('購物車Step1，點擊我要結帳'): pass
-        cartstep1.deliveryTab.should(be.clickable)
+        cartstep1.product_img.should(be.visible)
         with allure.step('購物車Step2，選擇ATM付款，點擊確認結帳'): pass
         cartstep2=cartstep1.click_checkout_button()
         cartstep3=cartstep2.click_ATM_tab().click_checkout_button()
@@ -47,7 +47,7 @@ class TestShoppingProcess(object):
         proddetail.than()
         cartstep1 = proddetail.go_to_cart_step1_page()
         with allure.step('購物車Step1，點擊我要結帳'): pass
-        cartstep1.checkoutbtn.should(be.clickable)
+        cartstep1.product_img.should(be.visible)
         with allure.step('購物車Step2，選擇ATM付款，點擊確認結帳'): pass
         cartstep2=cartstep1.click_checkout_button()
         cartstep3=cartstep2.click_COD_tab().click_checkout_button()
@@ -67,8 +67,7 @@ class TestShoppingProcess(object):
         with allure.step('購物車Step1，點擊我要結帳'): pass
         cartstep1 = proddetail.go_to_cart_step1_page()
         #cartstep1.click_stroe_pick_up_tab()
-        cartstep1.deliveryTab.should(be.clickable)
-        cartstep1.checkoutbtn.should(be.clickable)
+        cartstep1.product_img.should(be.visible)
         with allure.step('購物車Step2，點擊全家button'): pass
         cartstep2 = cartstep1.click_checkout_button()
         #cartstep2.click_store_COD_tab()
