@@ -10,6 +10,7 @@ class ProductDetailPage(BasePage):
         self.lable=s('span.n-labels.n-bg--se-lighter')#屬性label
         self.addtowishlist=s('a.n-btn>i.n-icon--collect')#加入收藏
         self.delivery=ss('li.n-form--radio')#配送方式
+        self.store_pickup_input=s('input#d_17') #超取
         self.styleSelectror=s('select#styleSelector.n-form--control ')#選擇規格
         self.subStyleSelectror = s('select#subStyleSelector.n-form--control ')  # 選擇樣式
         self.quantitySelector=s('select#quantitySelector.n-form--control ')#選擇數量
@@ -20,6 +21,7 @@ class ProductDetailPage(BasePage):
         self.alertBackToShopping=s('a.n-btn n-btn--lv3')#alert繼續購物
         self.soldout=s('a.n-btn.n-btn--disabled[title="銷售一空"]')#銷售一空
         self.arrivalNotice=s('a.n-btn.n-btn--normal[data-action="ProdDetail_UpPurchaseInfo_ArrivalNotice"]')#貨到通知
+
 
     def open_proddetail_page(self,goodid):
         browser.open_url('/i/'+goodid)
@@ -42,4 +44,8 @@ class ProductDetailPage(BasePage):
 
     def go_to_cart_step1_page(self):
         return CartStep1Page()
+
+    def click_store_pick_up(self):
+        self.store_pickup_input.click()
+        return self
 

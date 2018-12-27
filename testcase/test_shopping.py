@@ -17,10 +17,10 @@ class TestShoppingProcess(object):
                 main_page = login.login_as(variables['user'], variables['password']).than_at_main_page()
                 main_page.logontext.should(be.visible)
                 break
-            except NoSuchElement as e:
-                print(e, ", try again!")
+            except:
+                continue
 
-    @allure.story('一般商品結帳')
+    ''''@allure.story('一般商品結帳')
     def test_checkout_normal_product(self,variables):
         with allure.step('開啟一般宅配商品-商品細節頁'):pass
         proddetail=ProductDetailPage()
@@ -52,5 +52,31 @@ class TestShoppingProcess(object):
         cartstep2=cartstep1.click_checkout_button()
         cartstep3=cartstep2.click_COD_tab().click_checkout_button()
         with allure.step('購物車Step3，會出現感謝付款文案'): pass
-        cartstep3.text24.should(be.visible)
+        cartstep3.text24.should(be.visible)'''
 
+    @allure.story('超取商品結帳')
+    def test_checkout_store_pick_up_product(self, variables):
+        with allure.step('開啟超取商品-商品細節頁'): pass
+        proddetail = ProductDetailPage()
+        proddetail.open_proddetail_page(variables["storepickup"])
+        with allure.step('點擊立即購買，切換到購物車Step1'): pass
+        proddetail.click_store_pick_up()
+        proddetail.click_go_to_checkout()
+        proddetail.than()
+        with allure.step('購物車Step1，點擊我要結帳'): pass
+        cartstep1 = proddetail.go_to_cart_step1_page()
+        #cartstep1.click_stroe_pick_up_tab()
+        cartstep1.checkoutbtn.should(be.clickable)
+        with allure.step('購物車Step2，點擊全家button'): pass
+        cartstep2 = cartstep1.click_checkout_button()
+        cartstep2.click_store_COD_tab()
+        with allure.step('選擇全家超商取貨門市'): pass
+        familystorepage=cartstep2.click_familystore_button()
+        windows=browser.driver().window_handles
+        browser.driver().switch_to.window(windows[-1])
+        familystorepage.input_store_id()
+        familystorepage.click_query_button()
+        cartstep2=familystorepage.click_submit_img()
+        with allure.step('購物車Step3，會出現感謝付款文案'): pass
+        cartstep3 = cartstep2.click_checkout_button()
+        cartstep3.text24.should(be.visible)
