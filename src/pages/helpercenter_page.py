@@ -19,3 +19,7 @@ class HelperCenterPage(BasePage):
         Selector_Element=Select(self.quetiontypeselect)
         Selector_Element.select_by_visible_text(str)
         return self
+
+    def input_textarea_content(self,str='測試聯絡我們，問題留言'):
+        self.textareacommentinput.set_value(str)
+        return self

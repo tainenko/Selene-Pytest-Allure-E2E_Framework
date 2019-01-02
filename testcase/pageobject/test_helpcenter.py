@@ -26,13 +26,15 @@ class TestHelperCenterPage:
         assert len(HelperCenterPage().quetiontypes)==11
 
     def test_submit_button_should_be_clickable(self):
-        assert HelperCenterPage().submitbtn.should(be.visible)
+        assert HelperCenterPage().submitbtn.should(be.clickable)
 
     def test_reset_input_should_be_clickable(self):
-        assert HelperCenterPage().resetinput.should(be.visible)
+        assert HelperCenterPage().resetinput.should(be.clickable)
 
     def test_select_quetion_types_by_string(self):
         HelperCenterPage().select_quetion_type()
 
+    def test_input_textarea_content(self):
+        HelperCenterPage().input_textarea_content()
 
 

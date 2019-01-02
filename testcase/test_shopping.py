@@ -3,6 +3,8 @@ from common import *
 from src.pages.main_page import MainPage
 from src.pages.login_page import LoginPage
 from src.pages.proddetail_page import ProductDetailPage
+from src.pages.cancel_page import CancelPage
+from src.pages.orderhistory_page import OrderHistoryPage
 
 @allure.feature('結帳功能')
 @pytest.mark.incremental
@@ -84,3 +86,14 @@ class TestShoppingProcess(object):
         with allure.step('購物車Step3，會出現感謝付款文案'): pass
         cartstep3 = cartstep2.click_checkout_button()
         cartstep3.text24.should(be.visible)
+
+    @allure.story('取消交易')
+    def test_cancel_order(self):
+        OrderHistoryPage().open_orderhistory_page()
+        num=len(OrderHistoryPage().numoforder)
+        for i in range(num):
+            OrderHistoryPage().open_orderhistory_page()
+            cancelpage=OrderHistoryPage().click_cancel_order_btn()
+            cancelpage.input_text_reason()
+            cancelpage.click_submit_btn()
+
