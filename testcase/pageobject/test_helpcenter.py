@@ -20,16 +20,16 @@ class TestHelperCenterPage:
 
     def test_open_helper_center_page(self):
         HelperCenterPage().open_helpcenter_url()
-        assert browser.title.should(have.text('聯絡我們'))
+        assert browser.title()=='聯絡我們-東森購物'
 
     def test_nums_of_quetion_types(self):
         assert len(HelperCenterPage().quetiontypes)==11
 
     def test_submit_button_should_be_clickable(self):
-        assert HelperCenterPage().submitbtn.should(be.clickable)
+        assert HelperCenterPage().submitbtn.should(be.visible)
 
     def test_reset_input_should_be_clickable(self):
-        assert HelperCenterPage().resetinput.should(be.clickable)
+        assert HelperCenterPage().resetinput.should(be.visible)
 
     def test_select_quetion_types_by_string(self):
         HelperCenterPage().select_quetion_type()
