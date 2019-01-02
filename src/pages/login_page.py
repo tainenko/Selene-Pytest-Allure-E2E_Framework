@@ -30,6 +30,17 @@ class LoginPage(BasePage):
         browser.open_url(url)
         return self
 
+    '''def setup_login(self):
+        while (True):
+            try:
+                with allure.step('前置作業-會員登入'):pass
+                loginpage = self.open_login_page()
+                mainpage = loginpage.login_as(variables['user'], variables['password']).than_at_main_page()
+                mainpage.logontext.should(be.visible)
+                break
+            except:
+                continue'''
+
     def login_with_invalid_verifySN(self,user,passward,verifySN):
         self.username_input.set_value(user)
         self.password_input.set_value(passward)
