@@ -1,4 +1,5 @@
-from common import *
+from selene.api import *
+import allure ,pytest
 from selene.helpers import env
 from selene import config
 from selene.browsers import BrowserName

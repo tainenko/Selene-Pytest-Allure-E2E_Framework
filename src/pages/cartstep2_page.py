@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from common import *
+from selene.api import *
 from src.pages.page import BasePage
 from src.pages.cartstep3_page import CartStep3Page
 from src.pages.familystore_page import FamilyStorePage

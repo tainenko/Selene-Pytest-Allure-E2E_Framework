@@ -1,4 +1,5 @@
-from common import *
+# -*- coding: utf-8 -*-
+from selene.api import *
 from src.pages.page import BasePage
 
 class SearchResultPage(BasePage):

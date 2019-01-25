@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-from common import *
+from selene.api import *
 from src.pages.page import BasePage
-from src.pages.helpercenter_page import HelperCenterPage
+from src.pages.helper_center_page import HelperCenterPage
 from src.pages.cancel_page import CancelPage
 
 class OrderHistoryPage(BasePage):

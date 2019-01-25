@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
-from common import *
+import allure ,pytest
+from selene.api import *
 from src.pages.main_page import MainPage
 from src.pages.login_page import LoginPage
 from src.pages.proddetail_page import ProductDetailPage
@@ -89,8 +90,11 @@ class TestShoppingProcess(object):
 
     @allure.story('取消交易')
     def test_cancel_order(self):
+        with allure.step('開啟訂單中心頁'):pass
         OrderHistoryPage().open_orderhistory_page()
+        with allure.step('計算可取消交易的訂單總數'):pass
         num=len(OrderHistoryPage().numoforder)
+        with allure.step('將第一頁的訂單全部取消交易'):pass
         for i in range(num):
             OrderHistoryPage().open_orderhistory_page()
             cancelpage=OrderHistoryPage().click_cancel_order_btn()

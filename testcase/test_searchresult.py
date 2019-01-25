@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
-from common import *
+import allure ,pytest
+from selene.api import *
 from src.pages.main_page import MainPage
 from src.pages.searchresult_page import SearchResultPage
 

@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
-from common import *
+import allure ,pytest
+from selene.api import *
 from src.pages.login_page import LoginPage
 from src.pages.orderhistory_page import OrderHistoryPage
 

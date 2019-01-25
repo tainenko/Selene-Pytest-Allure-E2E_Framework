@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
-from common import *
-from src.pages.helpercenter_page import HelperCenterPage
+import allure ,pytest
+from selene.api import *
+from src.pages.helper_center_page import HelperCenterPage
 from src.pages.login_page import LoginPage
 
 class TestHelperCenterPage:
