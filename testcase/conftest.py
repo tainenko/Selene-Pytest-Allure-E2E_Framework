@@ -42,7 +42,7 @@ def set_browser_options(browsertype):
 
 @pytest.fixture(scope="module", autouse=True)
 def setup_browser():
-    config.browser_name = BrowserName.CHROME
+    config.browser_name = env('SELENE_BROWSER_NAME') or BrowserName.CHROME
     options = Options()
     prefs = {'profile.default_content_setting_values': {'notifications': 2}}  # 關閉chrome顯示通知
     options.add_experimental_option('prefs', prefs)
@@ -63,7 +63,7 @@ def setup_browser():
     from selene import helpers # 關閉selene測試失敗時自動截圖功能
     helpers.take_screenshot = lambda *x: "See attachments"
     yield None
-    browser.driver().delete_all_cookies() #teardown: reset the state of driver
+    #browser.driver().delete_all_cookies() #teardown: reset the state of driver
     browser.driver().quit()
 
 @pytest.fixture(scope="session", autouse=True)
