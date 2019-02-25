@@ -9,6 +9,8 @@ baidu-aip = "*"
 PILLOW ="*"
 selene = "*"
 pytest = "==3.6"
+pyvirtualdisplay = "*"
+pytesseract = "*"
 
 [dev-packages]
 

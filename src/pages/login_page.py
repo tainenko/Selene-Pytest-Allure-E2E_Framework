@@ -5,6 +5,7 @@ from src.pages.main_page import MainPage
 from aip import AipOcr
 import re
 from PIL import Image
+import pytesseract
 
 class LoginPage(BasePage):
     def __init__(self):
@@ -49,10 +50,31 @@ class LoginPage(BasePage):
         return self
 
     def get_verify_code_with_baidu_ocr(self):
+        '''
+        帳號：etmall_sdet
+        密碼:okmwsx12345E
+        手機:0966440268
+        DOC:https://cloud.baidu.com/doc/OCR/OCR-Python-SDK.html#.E9.85.8D.E7.BD.AEAipOcr
+        APP_ID = '你的 App ID'
+        API_KEY = '你的 Api Key'
+        SECRET_KEY = '你的 Secret Key'
+        client = AipOcr(APP_ID, API_KEY, SECRET_KEY)
+        返回格式範例：
+        {
+        "log_id": 2471272194,
+        "words_result_num": 2,
+        "words_result":
+            [
+            {"words": " TSINGTAO"},
+            {"words": "青島睥酒"}
+            ]
+        }
+        :return:
+        '''
         #create baidu-aip ocr client
-        APP_ID="11774205"
-        API_KEY="YdYCevGVrx5UbvGWsqAevUDc"
-        SECRET_KEY="QC4GK0NGlP4NPfEUCctictuZay6BQQ1Y"
+        APP_ID="15428109"
+        API_KEY="11L9VfvOweGpVgs8omxorLTK"
+        SECRET_KEY="6eNlH8yNuFGC4n7q2kNFgp04hqlrwgnr"
         client=AipOcr(APP_ID,API_KEY,SECRET_KEY)
         #read screenshot imgae of verifyImg
         image=open('temp/verifySN.png','rb').read()
@@ -60,18 +82,38 @@ class LoginPage(BasePage):
         result = client.basicGeneral(image)['words_result'][0]['words']
         return re.sub("[^0-9]", "", result)
 
+    def get_verify_code_with_tesseract(self):
+        '''
+        PILLOW對驗証碼圖片進行灰度化、二值化及去閥值除干擾線
+        pytesseract對處理完的圖片進行ocr
+        :return: string
+        '''
+        img=Image.open('./temp/verifySN.png')
+        img_gray=img.convert('L') #灰度化
+        img_two=img_gray.point(lambda x:255 if x >150 else 0) #二值化並去閥值
+        #img_two.save('./temp/temp.png')
+        res = pytesseract.image_to_string(img_two,config="-c tessedit_char_whitelist=0123456789 -psm 6") #tesseract-ocr辨識並設定白名單為數字
+        return res
+
+
     def get_verifyImg_screen_shot(self,seleneElement):
-        browser.driver().get_screenshot_as_file("./temp/verifySN.png")
-        location = seleneElement.location
-        size = seleneElement.size
+        '''
+        定位驗証碼圖片位置，截全屏圖後裁切，只留WebElement的部份
+        :param seleneElement:
+        :return:
+        '''
+        #seleneElement.get_screenshot_as_file("./temp/verifySN.png")
+        browser.driver().get_screenshot_as_file("./temp/verifySN.png") #截全屏圖
+        location = seleneElement.location #獲得該WebElement位置
+        size = seleneElement.size #獲得該WebElement大小
         img = Image.open("./temp/verifySN.png")
         left = location['x']
         top = location['y']
         right = location['x'] + size['width']
         bottom = location['y'] + size['height']
-        img = img.crop((int(left), int(top), int(right), int(bottom)))
-        img.resize((size['width'] * 2, size['height'] * 2), Image.BILINEAR)
-        img.save('./temp/verifySN.png')
+        img = img.crop((int(left), int(top), int(right), int(bottom))) #將全屏圖截切，只留WebElement的部分
+        img.resize((size['width'] * 2, size['height'] * 2), Image.BILINEAR) #圖片放大2倍
+        img.save('./temp/temp.png')
         return self
 
     def login_as(self,user,passward):

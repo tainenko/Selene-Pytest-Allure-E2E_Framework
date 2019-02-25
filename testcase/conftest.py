@@ -4,7 +4,7 @@ from selene.helpers import env
 from selene import config
 from selene.browsers import BrowserName
 from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.options import Optio/ns
 import platform
 
 #from pyvirtualdisplay import Display
