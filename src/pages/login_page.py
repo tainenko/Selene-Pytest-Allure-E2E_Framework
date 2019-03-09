@@ -51,9 +51,6 @@ class LoginPage(BasePage):
 
     def get_verify_code_with_baidu_ocr(self):
         '''
-        帳號：etmall_sdet
-        密碼:okmwsx12345E
-        手機:0966440268
         DOC:https://cloud.baidu.com/doc/OCR/OCR-Python-SDK.html#.E9.85.8D.E7.BD.AEAipOcr
         APP_ID = '你的 App ID'
         API_KEY = '你的 Api Key'
@@ -72,9 +69,9 @@ class LoginPage(BasePage):
         :return:
         '''
         #create baidu-aip ocr client
-        APP_ID="15428109"
-        API_KEY="11L9VfvOweGpVgs8omxorLTK"
-        SECRET_KEY="6eNlH8yNuFGC4n7q2kNFgp04hqlrwgnr"
+        APP_ID=""
+        API_KEY=""
+        SECRET_KEY=""
         client=AipOcr(APP_ID,API_KEY,SECRET_KEY)
         #read screenshot imgae of verifyImg
         image=open('temp/verifySN.png','rb').read()
